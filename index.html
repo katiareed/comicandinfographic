@@ -1,0 +1,1610 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Visual Prompt Libraries</title>
+<meta name="description" content="Copy-ready AI prompts for infographics and comics, with a mini preview of every style. Built for teachers and students.">
+<meta property="og:title" content="Visual Prompt Libraries">
+<meta property="og:description" content="44 infographic styles, 16 comic styles and 4 panel layouts, each with a copy-ready AI prompt.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiMxNjIxM0EiLz48cmVjdCB4PSIxMCIgeT0iMTIiIHdpZHRoPSIyMCIgaGVpZ2h0PSIxOCIgcng9IjQiIGZpbGw9IiMwQjdBNzUiLz48cmVjdCB4PSIzNCIgeT0iMTIiIHdpZHRoPSIyMCIgaGVpZ2h0PSIxOCIgcng9IjQiIGZpbGw9IiNGNkQ3NzYiLz48cmVjdCB4PSIxMCIgeT0iMzQiIHdpZHRoPSI0NCIgaGVpZ2h0PSIxOCIgcng9IjQiIGZpbGw9IiNCODMyMkEiLz48Y2lyY2xlIGN4PSI0NCIgY3k9IjIxIiByPSI0IiBmaWxsPSIjMTYyMTNBIi8+PC9zdmc+Cg==" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&amp;family=Bebas+Neue&amp;family=Caveat:wght@600;700&amp;family=Comic+Neue:wght@700&amp;family=Inter:wght@400;500;600;700&amp;family=Noto+Sans+SC:wght@600&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+<style>
+:root{
+  --ink:#16213A;
+  --mut:#535B6E;
+  --line:#DFE3EA;
+  --soft:#F5F6F9;
+  --bg:#FFFFFF;
+  --a:#0B7A75;
+  --t:#E3F2F1;
+  --radius:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;font-size:16px;line-height:1.55}
+img,svg{max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:"Space Grotesk",Inter,sans-serif;line-height:1.15;margin:0;text-wrap:balance}
+p{margin:0}
+.wrap{max-width:1200px;margin:0 auto;padding:0 16px}
+@media (min-width:700px){.wrap{padding:0 28px}}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:#fff;padding:8px 12px;border-radius:8px;z-index:10}
+.skip:focus{left:8px}
+:focus-visible{outline:3px solid var(--a);outline-offset:2px}
+
+/* Top bar */
+.topbar{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid var(--line)}
+.topbar-in{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:56px;flex-wrap:wrap}
+.brand{font-family:"Space Grotesk",Inter,sans-serif;font-weight:700;text-decoration:none;font-size:17px}
+.topbar nav{display:flex;gap:4px;flex-wrap:wrap}
+.topbar nav a{text-decoration:none;font-size:14px;font-weight:600;padding:8px 12px;border-radius:999px;color:var(--mut)}
+.topbar nav a:hover{background:var(--soft);color:var(--ink)}
+.topbar nav a[aria-current="page"]{background:var(--ink);color:#fff}
+
+/* Hero */
+.hero{padding:40px 0 28px;background:linear-gradient(var(--t),var(--t)) top/100% 100% no-repeat}
+.hero-home{--t:#EEF2F8;padding:56px 0 40px}
+.hero-info{--a:#0B7A75;--t:#E3F2F1}
+.hero-comic{--a:#B8322A;--t:#FBE7E4}
+.hero-in{display:grid;gap:24px}
+@media (min-width:900px){.hero-in{grid-template-columns:1.2fr 1fr;align-items:start;gap:40px}}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--a)}
+.hero h1{font-size:clamp(34px,6vw,56px);font-weight:700;margin:8px 0 12px}
+.h1-comic{font-family:Bangers,"Space Grotesk",sans-serif;font-weight:400 !important;letter-spacing:1px;color:var(--a)}
+.lead{font-size:18px;max-width:62ch;color:#2A3350}
+.tip{margin-top:16px;background:#fff;border-radius:12px;padding:12px 14px;font-size:15px;max-width:62ch}
+.tip b{color:var(--a)}
+.howto{background:#fff;border-radius:var(--radius);padding:20px 22px}
+.howto h2{font-size:19px;margin-bottom:12px}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.steps li{display:flex;gap:10px;align-items:flex-start;font-size:15px}
+.sn{flex:none;width:26px;height:26px;border-radius:50%;background:var(--a);color:#fff;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center}
+.ph{color:var(--a);font-weight:600;background:var(--t);border-radius:4px;padding:0 3px}
+
+/* Toolbar */
+.toolbar{position:sticky;top:56px;z-index:4;background:#fff;box-shadow:0 0 0 100vmax #fff;clip-path:inset(0 -100vmax);padding:14px 0;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.toc{display:flex;gap:6px;overflow-x:auto;scrollbar-width:thin;max-width:100%;padding-bottom:2px;flex:1 1 0;min-width:0}
+.toc a{flex:none;display:flex;align-items:center;gap:6px;text-decoration:none;font-size:13px;font-weight:600;padding:6px 10px 6px 6px;border-radius:999px;background:var(--t);color:var(--ink);white-space:nowrap}
+.toc a span{width:20px;height:20px;border-radius:50%;background:var(--a);color:#fff;font-size:11px;display:flex;align-items:center;justify-content:center}
+.search input{font:inherit;font-size:15px;padding:9px 14px;border:1px solid var(--line);border-radius:999px;width:min(320px,100%);min-height:44px}
+.search{flex:0 0 280px;display:flex;justify-content:flex-end}
+@media (max-width:899px){.toolbar{position:static}.search{flex:1 1 100%;justify-content:stretch}.search input{width:100%}.topbar{position:static}}
+.empty{padding:32px 0;color:var(--mut)}
+
+/* Sections and cards */
+.sec{padding:36px 0 8px;scroll-margin-top:140px}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;border-bottom:3px solid var(--a);padding-bottom:10px;margin-bottom:18px}
+.sec-head h2{font-size:clamp(24px,3.4vw,32px)}
+.range{color:var(--mut);font-size:14px;white-space:nowrap}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,330px),1fr));gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:14px;display:flex;flex-direction:column;gap:10px;scroll-margin-top:130px}
+.card[hidden]{display:none}
+.card-head{display:flex;align-items:baseline;gap:10px}
+.num{font-size:13px;font-weight:700;letter-spacing:.08em;color:var(--a)}
+.card h3{font-size:19px;font-weight:600}
+.best{font-size:14px;color:var(--mut)}
+.best b{color:var(--ink);font-weight:600}
+svg.pv{display:block;width:100%;height:auto;aspect-ratio:320/100;border-radius:10px;background:var(--t)}
+.prompt{flex:1;background:var(--soft);border:1px solid #E1E4EB;border-radius:10px;padding:12px 14px;font-size:15px;line-height:1.55;color:#1E2433}
+.copy{font:inherit;font-weight:600;font-size:14px;align-self:flex-start;min-height:44px;padding:10px 18px;border-radius:999px;border:0;background:var(--a);color:#fff;cursor:pointer}
+.copy:hover{filter:brightness(1.1)}
+.copy.done{background:var(--ink)}
+.copy.small{min-height:36px;padding:6px 14px;font-size:13px;margin-left:auto}
+
+/* Extras */
+.extras{display:grid;gap:18px;padding:40px 0 56px}
+@media (min-width:900px){.extras{grid-template-columns:1.4fr 1fr}}
+.panel{background:var(--soft);border-radius:var(--radius);padding:22px}
+.panel h2{font-size:22px;margin-bottom:4px}
+.panel .steps{margin-top:12px}
+.muted{color:var(--mut);font-size:14px;margin-bottom:12px}
+.addons{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.addons li{display:flex;gap:12px;align-items:center;background:#fff;border-radius:10px;padding:8px 10px 8px 14px;font-size:15px;flex-wrap:wrap}
+.addons li b{color:#0B7A75;width:14px}
+.addons li span{flex:1 1 220px}
+
+/* Toast and footer */
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);background:var(--ink);color:#fff;padding:10px 18px;border-radius:999px;font-size:14px;font-weight:600;opacity:0;pointer-events:none;transition:all .2s ease}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.footer{border-top:1px solid var(--line);padding:22px 0;color:var(--mut);font-size:14px}
+.footer-in{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.lib,.toast{transition:none}}
+@media print{
+  .topbar,.toolbar,.copy,.toast,.skip{display:none !important}
+  .hero{padding:12px 0}
+  .card,.panel{break-inside:avoid}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  body{font-size:12pt}
+}
+
+.libpanel[hidden]{display:none}
+.topbar nav a{cursor:pointer}
+.switch{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.switch a{text-decoration:none;font-weight:700;font-size:14px;padding:10px 16px;border-radius:999px;border:2px solid var(--a);color:var(--a);background:#fff;min-height:44px;display:inline-flex;align-items:center}
+.switch a[aria-current="page"]{background:var(--a);color:#fff}
+
+
+.p-info svg.pv .a{fill:var(--a)}.p-info svg.pv .m{fill:var(--a);fill-opacity:.45}.p-info svg.pv .w{fill:#fff}.p-info svg.pv .k{fill:var(--ink)}
+.p-info svg.pv .s{fill:none;stroke:var(--a);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.p-info svg.pv .sk{fill:none;stroke:var(--ink);stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round}
+.p-info svg.pv .sw{fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.p-info svg.pv .t1{font-family:'Space Grotesk',Inter,sans-serif;font-weight:700;font-size:10px;fill:var(--ink)}
+.p-info svg.pv .t2{font-family:Inter,sans-serif;font-weight:600;font-size:7.5px;fill:var(--ink)}
+.p-info svg.pv .t3{font-family:Inter,sans-serif;font-weight:500;font-size:6.5px;fill:var(--mut)}
+.p-info svg.pv .tb{font-family:'Space Grotesk',Inter,sans-serif;font-weight:700;font-size:18px}
+.p-info svg.pv .hw{font-family:Caveat,cursive;font-weight:700}
+.p-info svg.pv .sf{font-family:'Playfair Display',Georgia,serif;font-weight:700}
+.p-info svg.pv .bb{font-family:'Bebas Neue','Space Grotesk',sans-serif}
+.p-info svg.pv .tw{fill:#fff}.p-info svg.pv .ta{fill:var(--a)}.p-info svg.pv .c{text-anchor:middle}.p-info svg.pv .e{text-anchor:end}
+
+.p-comic svg.pv .pn{fill:#fff;stroke:var(--ink);stroke-width:1.5}
+.p-comic svg.pv .bb{fill:#fff;stroke:var(--ink);stroke-width:1}
+.p-comic svg.pv .a{fill:var(--a)}.p-comic svg.pv .w{fill:#fff}.p-comic svg.pv .k{fill:var(--ink)}
+.p-comic svg.pv .sk{fill:none;stroke:var(--ink);stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round}
+.p-comic svg.pv .sk2{fill:#F2C9A0;stroke:var(--ink);stroke-width:1}
+.p-comic svg.pv .bt{font-family:'Comic Neue',Inter,sans-serif;font-weight:700;font-size:7px;fill:var(--ink)}
+.p-comic svg.pv .fx{font-family:Bangers,'Space Grotesk',sans-serif;letter-spacing:.5px}
+.p-comic svg.pv .hw{font-family:Caveat,cursive;font-weight:700}
+.p-comic svg.pv .sf{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:600}
+.p-comic svg.pv .zh{font-family:'Noto Sans SC',sans-serif;font-weight:600}
+.p-comic svg.pv .t2{font-family:Inter,sans-serif;font-weight:600;font-size:7.5px;fill:var(--ink)}
+.p-comic svg.pv .t3{font-family:Inter,sans-serif;font-weight:600;font-size:6.5px;fill:var(--ink)}
+.p-comic svg.pv .c{text-anchor:middle}
+
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+<div class="wrap topbar-in">
+<span class="brand">Visual Prompt Libraries</span>
+<nav aria-label="Libraries"><a href="#infographics" data-tab="infographics">Infographics</a><a href="#comics" data-tab="comics">Comics</a></nav>
+</div>
+</header>
+<main id="main">
+<div class="libpanel p-info" id="infographics" data-panel>
+<section class="hero hero-info">
+<div class="wrap hero-in">
+<div class="hero-copy">
+<p class="kicker">Teacher resource  |  44 styles</p>
+<h1 class="h1-info">Infographic Style Library</h1>
+<p class="lead">Forty-four visual styles, each shown as a mini infographic with a copy-ready prompt you can customize for Canva, Gemini, ChatGPT or any AI image tool.</p>
+
+<div class="switch" aria-label="Choose a library"><a href="#infographics" data-tab="infographics">Infographic Styles</a><a href="#comics" data-tab="comics">Comic Styles</a></div>
+</div>
+<div class="howto">
+<h2>How to Use</h2>
+<ol class="steps">
+<li><span class="sn">1</span><span>Pick a style that suits your content and audience.</span></li>
+<li><span class="sn">2</span><span>Press Copy prompt under its preview.</span></li>
+<li><span class="sn">3</span><span>Replace every <span class="ph">[BRACKET]</span> with your own details.</span></li>
+<li><span class="sn">4</span><span>Paste into your AI image tool, then iterate.</span></li>
+</ol>
+</div>
+</div>
+</section>
+<div class="wrap">
+<div class="toolbar">
+<nav class="toc" aria-label="Infographic Style Library sections">
+<a href="#info-s1" style="--a:#0B7A75;--t:#E3F2F1"><span>1</span>The Essentials</a>
+<a href="#info-s2" style="--a:#2B54C9;--t:#E7EDFB"><span>2</span>Data and Numbers</a>
+<a href="#info-s3" style="--a:#B9520F;--t:#FBEADF"><span>3</span>Process and Structure</a>
+<a href="#info-s4" style="--a:#2F7D3A;--t:#E6F2E7"><span>4</span>Compare, Connect and Track</a>
+<a href="#info-s5" style="--a:#6B44C4;--t:#EEE8FA"><span>5</span>Storytelling and Classroom</a>
+<a href="#info-s6" style="--a:#1F6F8B;--t:#E2EFF4"><span>6</span>Maps and Labelled Places</a>
+<a href="#info-s7" style="--a:#8A6A1F;--t:#F6EFDC"><span>7</span>3D and Luxury</a>
+<a href="#info-s8" style="--a:#B8326A;--t:#F9E6EE"><span>8</span>Aesthetic Styles</a>
+</nav>
+<label class="search"><span class="visually-hidden">Filter Infographic Style Library</span><input type="search" placeholder="Filter 44 styles, e.g. map or 3D" data-filter></label>
+</div>
+<p class="empty" hidden data-empty>No styles match that search.</p>
+<section class="sec" id="info-s1" style="--a:#0B7A75;--t:#E3F2F1" aria-labelledby="info-s1-h">
+<div class="sec-head">
+<div><p class="kicker">Section 1</p><h2 id="info-s1-h">The Essentials</h2></div>
+<p class="range">01 to 04</p>
+</div>
+<div class="grid">
+<article class="card" id="info-01" data-search="01 horizontal timeline history, project milestones, unit overviews">
+<div class="card-head"><span class="num">01</span><h3>Horizontal Timeline</h3></div>
+<p class="best"><b>Best for:</b> history, project milestones, unit overviews</p>
+<svg class="pv" role="img" aria-label="Sample preview: Horizontal Timeline" viewBox="0 0 320 100">
+<text class="t1" x="14" y="18">A Short History of AI</text>
+<path class="s" d="M20 58H300" style="stroke-width:3"></path>
+<circle class="a" cx="55" cy="58" r="6"></circle><circle class="w" cx="55" cy="58" r="2.5"></circle>
+<circle class="a" cx="125" cy="58" r="6"></circle><circle class="w" cx="125" cy="58" r="2.5"></circle>
+<circle class="a" cx="195" cy="58" r="6"></circle><circle class="w" cx="195" cy="58" r="2.5"></circle>
+<circle class="a" cx="265" cy="58" r="6"></circle><circle class="w" cx="265" cy="58" r="2.5"></circle>
+<text class="t2 c" x="55" y="44">1956</text><text class="t2 c" x="125" y="44">1997</text><text class="t2 c" x="195" y="44">2012</text><text class="t2 c" x="265" y="44">2022</text>
+<text class="t3 c" x="55" y="77">AI is named</text><text class="t3 c" x="125" y="77">Deep Blue wins</text><text class="t3 c" x="195" y="77">Deep learning boom</text><text class="t3 c" x="265" y="77">ChatGPT launches</text>
+</svg>
+<div class="prompt" id="info-01-p">Create a horizontal timeline infographic about <span class="ph">[TOPIC]</span> showing <span class="ph">[NUMBER]</span> key events from <span class="ph">[START DATE]</span> to <span class="ph">[END DATE]</span>. Place events along one bold line with dated markers, a short title and a one-sentence caption for each. Use <span class="ph">[COLOUR PALETTE]</span>, simple icons, generous white space and a clear headline. Audience: <span class="ph">[AUDIENCE]</span>.</div>
+<button class="copy" type="button" data-copy="info-01-p">Copy prompt</button>
+</article>
+<article class="card" id="info-02" data-search="02 numbered process instructions, routines, the design cycle">
+<div class="card-head"><span class="num">02</span><h3>Numbered Process</h3></div>
+<p class="best"><b>Best for:</b> instructions, routines, the design cycle</p>
+<svg class="pv" role="img" aria-label="Sample preview: Numbered Process" viewBox="0 0 320 100">
+<text class="t1" x="14" y="18">Make a Class Podcast in 4 Steps</text>
+<rect class="w" x="14" y="30" width="62" height="54" rx="8"></rect><rect class="w" x="90" y="30" width="62" height="54" rx="8"></rect><rect class="w" x="166" y="30" width="62" height="54" rx="8"></rect><rect class="w" x="242" y="30" width="62" height="54" rx="8"></rect>
+<circle class="a" cx="45" cy="47" r="9"></circle><circle class="a" cx="121" cy="47" r="9"></circle><circle class="a" cx="197" cy="47" r="9"></circle><circle class="a" cx="273" cy="47" r="9"></circle>
+<text class="t2 tw c" x="45" y="50">1</text><text class="t2 tw c" x="121" y="50">2</text><text class="t2 tw c" x="197" y="50">3</text><text class="t2 tw c" x="273" y="50">4</text>
+<text class="t2 c" x="45" y="69">Plan</text><text class="t2 c" x="121" y="69">Record</text><text class="t2 c" x="197" y="69">Edit</text><text class="t2 c" x="273" y="69">Publish</text>
+<text class="t3 c" x="45" y="78">Write a script</text><text class="t3 c" x="121" y="78">Quiet room</text><text class="t3 c" x="197" y="78">Cut and polish</text><text class="t3 c" x="273" y="78">Share the link</text>
+<path class="s" d="M80 54l4 3-4 3M156 54l4 3-4 3M232 54l4 3-4 3" style="stroke-width:2"></path>
+</svg>
+<div class="prompt" id="info-02-p">Design a step-by-step process infographic explaining how to <span class="ph">[PROCESS]</span>. Show <span class="ph">[NUMBER]</span> numbered steps connected left to right, each with an icon, a short action title and one line of explanation. Use <span class="ph">[COLOUR PALETTE]</span>, rounded shapes and large readable numbers. Keep the language simple for <span class="ph">[AUDIENCE]</span>.</div>
+<button class="copy" type="button" data-copy="info-02-p">Copy prompt</button>
+</article>
+<article class="card" id="info-03" data-search="03 side by side comparison pros and cons, tool choices, debates">
+<div class="card-head"><span class="num">03</span><h3>Side by Side Comparison</h3></div>
+<p class="best"><b>Best for:</b> pros and cons, tool choices, debates</p>
+<svg class="pv" role="img" aria-label="Sample preview: Side by Side Comparison" viewBox="0 0 320 100">
+<text class="t1" x="14" y="18">Paper Notes vs Digital Notes</text>
+<rect class="a" x="14" y="27" width="138" height="64" rx="8"></rect><rect class="m" x="168" y="27" width="138" height="64" rx="8"></rect>
+<text class="t2 tw" x="24" y="41" style="font-size:8.5px">Paper Notes</text><text class="t2" x="178" y="41" style="font-size:8.5px">Digital Notes</text>
+<circle class="w" cx="28" cy="55" r="3"></circle><circle class="w" cx="28" cy="67" r="3"></circle><circle class="w" cx="28" cy="79" r="3"></circle>
+<circle class="w" cx="182" cy="55" r="3"></circle><circle class="w" cx="182" cy="67" r="3"></circle><circle class="w" cx="182" cy="79" r="3"></circle>
+<text class="t3 tw" x="36" y="57">No battery needed</text><text class="t3 tw" x="36" y="69">Easy to sketch</text><text class="t3 tw" x="36" y="81">Hard to search</text>
+<text class="t3" x="190" y="57" style="fill:var(--ink)">Instantly searchable</text><text class="t3" x="190" y="69" style="fill:var(--ink)">Easy to share</text><text class="t3" x="190" y="81" style="fill:var(--ink)">Needs charging</text>
+<circle class="w" cx="160" cy="59" r="11" style="stroke:var(--a);stroke-width:1.5"></circle><text class="t2 c ta" x="160" y="62">VS</text>
+</svg>
+<div class="prompt" id="info-03-p">Create a side-by-side comparison infographic of <span class="ph">[OPTION A]</span> versus <span class="ph">[OPTION B]</span>. Split the layout into two colour-coded columns (<span class="ph">[COLOUR A]</span> and <span class="ph">[COLOUR B]</span>) and compare them across <span class="ph">[NUMBER]</span> criteria: <span class="ph">[CRITERIA]</span>. Use matching icons in each row, a central divider labelled VS, and a short verdict box at the bottom.</div>
+<button class="copy" type="button" data-copy="info-03-p">Copy prompt</button>
+</article>
+<article class="card" id="info-04" data-search="04 statistical dashboard data reports, survey results, reviews">
+<div class="card-head"><span class="num">04</span><h3>Statistical Dashboard</h3></div>
+<p class="best"><b>Best for:</b> data reports, survey results, reviews</p>
+<svg class="pv" role="img" aria-label="Sample preview: Statistical Dashboard" viewBox="0 0 320 100">
+<text class="t1" x="14" y="18">Reading Challenge Dashboard</text><text class="t3 e" x="306" y="18">Sample data</text>
+<rect class="a" x="14" y="26" width="96" height="64" rx="8"></rect>
+<text class="tb tw" x="24" y="56">1,240</text><text class="t3 tw" x="24" y="68">books read this term</text>
+<rect class="w" x="118" y="26" width="92" height="64" rx="8"></rect>
+<text class="t3" x="126" y="37">Books per grade</text>
+<rect class="m" x="128" y="62" width="12" height="20" rx="1.5"></rect><rect class="a" x="146" y="48" width="12" height="34" rx="1.5"></rect><rect class="m" x="164" y="56" width="12" height="26" rx="1.5"></rect><rect class="m" x="182" y="66" width="12" height="16" rx="1.5"></rect>
+<rect class="w" x="218" y="26" width="88" height="30" rx="8"></rect><text class="t1 ta" x="228" y="44" style="font-size:12px">86%</text><text class="t3" x="256" y="44">joined</text>
+<rect class="w" x="218" y="60" width="88" height="30" rx="8"></rect><path class="s" d="M228 82l12-8 10 4 14-12 14 6" style="stroke-width:1.8"></path><text class="t3" x="282" y="72">trend</text>
+</svg>
+<div class="prompt" id="info-04-p">Design a data dashboard infographic presenting <span class="ph">[NUMBER]</span> key statistics about <span class="ph">[TOPIC]</span>. Arrange the data in a clean grid of cards: one large hero statistic, two small charts and three supporting figures with labels. Use <span class="ph">[COLOUR PALETTE]</span>, a neutral background and a source line at the bottom. Data: <span class="ph">[DATA]</span>.</div>
+<button class="copy" type="button" data-copy="info-04-p">Copy prompt</button>
+</article>
+</div>
+</section><section class="sec" id="info-s2" style="--a:#2B54C9;--t:#E7EDFB" aria-labelledby="info-s2-h">
+<div class="sec-head">
+<div><p class="kicker">Section 2</p><h2 id="info-s2-h">Data and Numbers</h2></div>
+<p class="range">05 to 10</p>
+</div>
+<div class="grid">
+<article class="card" id="info-05" data-search="05 pictogram icon array ratios and proportions that feel human">
+<div class="card-head"><span class="num">05</span><h3>Pictogram Icon Array</h3></div>
+<p class="best"><b>Best for:</b> ratios and proportions that feel human</p>
+<svg class="pv" role="img" aria-label="Sample preview: Pictogram Icon Array" viewBox="0 0 320 100">
+<text class="t1" x="14" y="18">About 1 in 4 People Worldwide Are Under 15</text>
+<text class="tb ta" x="14" y="62" style="font-size:24px">1 in 4</text><text class="t3" x="14" y="76">people are children</text><text class="t3" x="14" y="85">under the age of 15</text>
+<circle class="a" cx="122" cy="44" r="6"></circle><rect class="a" x="114" y="53" width="16" height="24" rx="6"></rect>
+<circle class="w" cx="146" cy="44" r="6"></circle><rect class="w" x="138" y="53" width="16" height="24" rx="6"></rect>
+<circle class="w" cx="170" cy="44" r="6"></circle><rect class="w" x="162" y="53" width="16" height="24" rx="6"></rect>
+<circle class="w" cx="194" cy="44" r="6"></circle><rect class="w" x="186" y="53" width="16" height="24" rx="6"></rect>
+<circle class="a" cx="218" cy="44" r="6"></circle><rect class="a" x="210" y="53" width="16" height="24" rx="6"></rect>
+<circle class="w" cx="242" cy="44" r="6"></circle><rect class="w" x="234" y="53" width="16" height="24" rx="6"></rect>
+<circle class="w" cx="266" cy="44" r="6"></circle><rect class="w" x="258" y="53" width="16" height="24" rx="6"></rect>
+<circle class="w" cx="290" cy="44" r="6"></circle><rect class="w" x="282" y="53" width="16" height="24" rx="6"></rect>
+</svg>
+<div class="prompt" id="info-05-p">Create a pictogram infographic that shows <span class="ph">[STATISTIC, e.g. 3 in 10 students]</span> using a grid of <span class="ph">[NUMBER]</span> identical <span class="ph">[ICON]</span> icons, with the relevant portion highlighted in <span class="ph">[HIGHLIGHT COLOUR]</span> and the rest in light grey. Add a bold headline, a one-line explanation and the source. Minimal flat style for <span class="ph">[AUDIENCE]</span>.</div>
+<button class="copy" type="button" data-copy="info-05-p">Copy prompt</button>
+</article>
+<article class="card" id="info-06" data-search="06 big number highlight social posts, newsletters, one key fact">
+<div class="card-head"><span class="num">06</span><h3>Big Number Highlight</h3></div>
+<p class="best"><b>Best for:</b> social posts, newsletters, one key fact</p>
+<svg class="pv" role="img" aria-label="Sample preview: Big Number Highlight" viewBox="0 0 320 100">
+<text class="t3" x="14" y="18" style="font-weight:700;letter-spacing:1px">OUR BLUE PLANET</text>
+<text class="tb ta" x="12" y="78" style="font-size:58px">71%</text>
+<rect class="a" x="150" y="36" width="3" height="40" rx="1.5"></rect>
+<text class="t1" x="164" y="50" style="font-size:11px">of Earth's surface is</text><text class="t1" x="164" y="64" style="font-size:11px">covered by water</text>
+<path class="s" d="M164 78c6-5 12 5 18 0s12 5 18 0 12 5 18 0" style="stroke-width:2"></path>
+</svg>
+<div class="prompt" id="info-06-p">Design a bold big-number infographic about <span class="ph">[TOPIC]</span>. Feature the statistic <span class="ph">[NUMBER OR PERCENTAGE]</span> in very large type as the focal point, with a short supporting sentence underneath and one small icon. Use a <span class="ph">[BACKGROUND COLOUR]</span> background, high contrast <span class="ph">[TEXT COLOUR]</span> text and plenty of empty space. Size: <span class="ph">[SIZE, e.g. 1080x1350]</span>.</div>
+<button class="copy" type="button" data-copy="info-06-p">Copy prompt</button>
+</article>
+<article class="card" id="info-07" data-search="07 donut breakdown budgets, time use, survey splits">
+<div class="card-head"><span class="num">07</span><h3>Donut Breakdown</h3></div>
+<p class="best"><b>Best for:</b> budgets, time use, survey splits</p>
+<svg class="pv" role="img" aria-label="Sample preview: Donut Breakdown" viewBox="0 0 320 100">
+<text class="t1" x="14" y="18">What Is the Air We Breathe Made Of?</text>
+<circle cx="70" cy="60" r="26" transform="rotate(-90 70 60)" style="fill:none;stroke:var(--a);stroke-width:13;stroke-dasharray:127.4 163.4"></circle>
+<circle cx="70" cy="60" r="26" transform="rotate(-90 70 60)" style="fill:none;stroke:var(--a);stroke-opacity:.45;stroke-width:13;stroke-dasharray:0 127.4 34.3 163.4"></circle>
+<circle cx="70" cy="60" r="26" transform="rotate(-90 70 60)" style="fill:none;stroke:var(--ink);stroke-width:13;stroke-dasharray:0 161.7 1.7 163.4"></circle>
+<text class="t2 c" x="70" y="63">Air</text>
+<rect class="a" x="128" y="38" width="10" height="10" rx="2"></rect><text class="t2" x="144" y="46">Nitrogen</text><text class="t1 ta e" x="300" y="46">78%</text>
+<rect class="m" x="128" y="55" width="10" height="10" rx="2"></rect><text class="t2" x="144" y="63">Oxygen</text><text class="t1 ta e" x="300" y="63">21%</text>
+<rect class="k" x="128" y="72" width="10" height="10" rx="2"></rect><text class="t2" x="144" y="80">Other gases</text><text class="t1 ta e" x="300" y="80">1%</text>
+<path d="M144 51H300M144 68H300" style="stroke:var(--a);stroke-opacity:.25;stroke-width:1"></path>
+</svg>
+<div class="prompt" id="info-07-p">Create a donut chart infographic showing how <span class="ph">[WHOLE]</span> breaks down into <span class="ph">[NUMBER]</span> parts: <span class="ph">[CATEGORIES AND PERCENTAGES]</span>. Label each segment with its percentage and a matching icon, place the total in the centre of the donut and add a short key. Use <span class="ph">[COLOUR PALETTE]</span> with clearly distinct segment colours.</div>
+<button class="copy" type="button" data-copy="info-07-p">Copy prompt</button>
+</article>
+<article class="card" id="info-08" data-search="08 bar chart story ranking, comparing results across groups">
+<div class="card-head"><span class="num">08</span><h3>Bar Chart Story</h3></div>
+<p class="best"><b>Best for:</b> ranking, comparing results across groups</p>
+<svg class="pv" role="img" aria-label="Sample preview: Bar Chart Story" viewBox="0 0 320 100">
+<text class="t1" x="14" y="18">Jupiter Is the Giant of Our Solar System</text>
+<text class="t2" x="14" y="36">Jupiter</text><rect class="a" x="62" y="29" width="180" height="9" rx="2"></rect><text class="t3" x="247" y="36">139,820 km</text>
+<text class="t2" x="14" y="50">Saturn</text><rect class="m" x="62" y="43" width="150" height="9" rx="2"></rect><text class="t3" x="217" y="50">116,460 km</text>
+<text class="t2" x="14" y="64">Uranus</text><rect class="m" x="62" y="57" width="65" height="9" rx="2"></rect><text class="t3" x="132" y="64">50,724 km</text>
+<text class="t2" x="14" y="78">Neptune</text><rect class="m" x="62" y="71" width="63" height="9" rx="2"></rect><text class="t3" x="130" y="78">49,244 km</text>
+<text class="t2" x="14" y="92">Earth</text><rect class="m" x="62" y="85" width="16" height="9" rx="2"></rect><text class="t3" x="83" y="92">12,742 km</text>
+</svg>
+<div class="prompt" id="info-08-p">Design a bar chart infographic comparing <span class="ph">[WHAT IS MEASURED]</span> across <span class="ph">[CATEGORIES]</span>. Use horizontal bars sorted from highest to lowest, value labels at the end of each bar and the key insight written as the headline. Highlight <span class="ph">[KEY BAR]</span> in <span class="ph">[ACCENT COLOUR]</span> and keep the others muted. Data: <span class="ph">[DATA]</span>.</div>
+<button class="copy" type="button" data-copy="info-08-p">Copy prompt</button>
+</article>
+<article class="card" id="info-09" data-search="09 heat map grid patterns over time, attendance, usage">
+<div class="card-head"><span class="num">09</span><h3>Heat Map Grid</h3></div>
+<p class="best"><b>Best for:</b> patterns over time, attendance, usage</p>
+<svg class="pv" role="img" aria-label="Sample preview: Heat Map Grid" viewBox="0 0 320 100">
+<text class="t1" x="14" y="18">Library Visits by Day and Period</text><text class="t3 e" x="306" y="18">Sample data</text>
+<text class="t2" x="14" y="38">Mon</text><text class="t2" x="14" y="52">Tue</text><text class="t2" x="14" y="66">Wed</text><text class="t2" x="14" y="80">Thu</text>
+<rect class="a" x="44" y="30" width="32" height="12" rx="2" style="fill-opacity:.2"></rect><rect class="a" x="78" y="30" width="32" height="12" rx="2" style="fill-opacity:.45"></rect><rect class="a" x="112" y="30" width="32" height="12" rx="2" style="fill-opacity:.9"></rect><rect class="a" x="146" y="30" width="32" height="12" rx="2" style="fill-opacity:.6"></rect><rect class="a" x="180" y="30" width="32" height="12" rx="2" style="fill-opacity:.3"></rect><rect class="a" x="214" y="30" width="32" height="12" rx="2" style="fill-opacity:.15"></rect>
+<rect class="a" x="44" y="44" width="32" height="12" rx="2" style="fill-opacity:.3"></rect><rect class="a" x="78" y="44" width="32" height="12" rx="2" style="fill-opacity:.6"></rect><rect class="a" x="112" y="44" width="32" height="12" rx="2"></rect><rect class="a" x="146" y="44" width="32" height="12" rx="2" style="fill-opacity:.7"></rect><rect class="a" x="180" y="44" width="32" height="12" rx="2" style="fill-opacity:.4"></rect><rect class="a" x="214" y="44" width="32" height="12" rx="2" style="fill-opacity:.2"></rect>
+<rect class="a" x="44" y="58" width="32" height="12" rx="2" style="fill-opacity:.15"></rect><rect class="a" x="78" y="58" width="32" height="12" rx="2" style="fill-opacity:.4"></rect><rect class="a" x="112" y="58" width="32" height="12" rx="2" style="fill-opacity:.75"></rect><rect class="a" x="146" y="58" width="32" height="12" rx="2" style="fill-opacity:.5"></rect><rect class="a" x="180" y="58" width="32" height="12" rx="2" style="fill-opacity:.25"></rect><rect class="a" x="214" y="58" width="32" height="12" rx="2" style="fill-opacity:.1"></rect>
+<rect class="a" x="44" y="72" width="32" height="12" rx="2" style="fill-opacity:.25"></rect><rect class="a" x="78" y="72" width="32" height="12" rx="2" style="fill-opacity:.55"></rect><rect class="a" x="112" y="72" width="32" height="12" rx="2" style="fill-opacity:.95"></rect><rect class="a" x="146" y="72" width="32" height="12" rx="2" style="fill-opacity:.65"></rect><rect class="a" x="180" y="72" width="32" height="12" rx="2" style="fill-opacity:.35"></rect><rect class="a" x="214" y="72" width="32" height="12" rx="2" style="fill-opacity:.2"></rect>
+<text class="t3 c" x="60" y="94">P1</text><text class="t3 c" x="94" y="94">P2</text><text class="t3 c" x="128" y="94">Lunch</text><text class="t3 c" x="162" y="94">P4</text><text class="t3 c" x="196" y="94">P5</text><text class="t3 c" x="230" y="94">P6</text>
+<text class="t3" x="262" y="40">Low</text><rect class="a" x="262" y="44" width="10" height="10" rx="2" style="fill-opacity:.15"></rect><rect class="a" x="274" y="44" width="10" height="10" rx="2" style="fill-opacity:.45"></rect><rect class="a" x="286" y="44" width="10" height="10" rx="2" style="fill-opacity:.75"></rect><rect class="a" x="298" y="44" width="10" height="10" rx="2"></rect><text class="t3 e" x="308" y="64">High</text>
+</svg>
+<div class="prompt" id="info-09-p">Design a heat map grid infographic showing <span class="ph">[VARIABLE]</span> across <span class="ph">[ROWS, e.g. days of the week]</span> and <span class="ph">[COLUMNS, e.g. times of day]</span>. Use a colour scale from <span class="ph">[LOW COLOUR]</span> to <span class="ph">[HIGH COLOUR]</span>, label every row and column and include a small legend. Add a headline that states the main pattern. Data: <span class="ph">[DATA]</span>.</div>
+<button class="copy" type="button" data-copy="info-09-p">Copy prompt</button>
+</article>
+<article class="card" id="info-10" data-search="10 bubble chart relative size, popularity, word frequency">
+<div class="card-head"><span class="num">10</span><h3>Bubble Chart</h3></div>
+<p class="best"><b>Best for:</b> relative size, popularity, word frequency</p>
+<svg class="pv" role="img" aria-label="Sample preview: Bubble Chart" viewBox="0 0 320 100">
+<text class="t1" x="14" y="18">Most Spoken Languages</text><text class="t3 e" x="306" y="18">Total speakers, approximate</text>
+<circle class="m" cx="60" cy="62" r="30"></circle><text class="t2 c" x="60" y="65">English</text>
+<circle class="a" cx="122" cy="60" r="26"></circle><text class="t2 tw c" x="122" y="63">Mandarin</text>
+<circle class="m" cx="172" cy="70" r="19"></circle><text class="t2 c" x="172" y="73">Hindi</text>
+<circle class="a" cx="212" cy="50" r="18"></circle><text class="t2 tw c" x="212" y="53">Spanish</text>
+<circle class="m" cx="252" cy="72" r="15"></circle><text class="t2 c" x="252" y="75">Arabic</text>
+<circle class="a" cx="286" cy="50" r="14"></circle><text class="t2 tw c" x="286" y="53" style="font-size:6.5px">French</text>
+</svg>
+<div class="prompt" id="info-10-p">Create a bubble chart infographic comparing <span class="ph">[ITEMS]</span> by <span class="ph">[MEASURE]</span>. Draw each item as a circle scaled to its value, label it inside the bubble and cluster the bubbles organically. Use <span class="ph">[COLOUR PALETTE]</span>, a soft background and a one-line takeaway at the top. Values: <span class="ph">[DATA]</span>.</div>
+<button class="copy" type="button" data-copy="info-10-p">Copy prompt</button>
+</article>
+</div>
+</section><section class="sec" id="info-s3" style="--a:#B9520F;--t:#FBEADF" aria-labelledby="info-s3-h">
+<div class="sec-head">
+<div><p class="kicker">Section 3</p><h2 id="info-s3-h">Process and Structure</h2></div>
+<p class="range">11 to 16</p>
+</div>
+<div class="grid">
+<article class="card" id="info-11" data-search="11 winding road roadmap learning journeys, project plans, career paths">
+<div class="card-head"><span class="num">11</span><h3>Winding Road Roadmap</h3></div>
+<p class="best"><b>Best for:</b> learning journeys, project plans, career paths</p>
+<svg class="pv" role="img" aria-label="Sample preview: Winding Road Roadmap" viewBox="0 0 320 100">
+<text class="t1" x="14" y="18">Our PBL Project Journey</text>
+<path d="M18 82C40 82 50 50 80 50S120 78 150 78S190 46 220 46S262 72 298 40" style="fill:none;stroke:#fff;stroke-width:10;stroke-linecap:round"></path>
+<path d="M18 82C40 82 50 50 80 50S120 78 150 78S190 46 220 46S262 72 298 40" style="fill:none;stroke:var(--a);stroke-width:1.2;stroke-dasharray:4 4"></path>
+<circle class="a" cx="18" cy="82" r="7"></circle><circle class="a" cx="80" cy="50" r="7"></circle><circle class="a" cx="150" cy="78" r="7"></circle><circle class="a" cx="220" cy="46" r="7"></circle>
+<text class="t2 tw c" x="18" y="85">1</text><text class="t2 tw c" x="80" y="53">2</text><text class="t2 tw c" x="150" y="81">3</text><text class="t2 tw c" x="220" y="49">4</text>
+<path class="sk" d="M298 40V22"></path><path class="a" d="M298 22h14l-4 4 4 4h-14z"></path>
+<text class="t2" x="28" y="96">Launch</text><text class="t2 c" x="80" y="38">Research</text><text class="t2 c" x="150" y="96">Prototype</text><text class="t2 c" x="220" y="34">Feedback</text><text class="t2 e" x="306" y="56">Showcase</text>
+</svg>
+<div class="prompt" id="info-11-p">Create a winding road roadmap infographic showing the journey of <span class="ph">[PROJECT OR LEARNING PATH]</span> in <span class="ph">[NUMBER]</span> milestones. Place each milestone as a numbered signpost along a curving road with an icon, title and short description. Use <span class="ph">[COLOUR PALETTE]</span>, a playful but professional style, and a finish flag labelled <span class="ph">[GOAL]</span>.</div>
+<button class="copy" type="button" data-copy="info-11-p">Copy prompt</button>
+</article>
+<article class="card" id="info-12" data-search="12 cycle diagram life cycles, the design cycle, feedback loops">
+<div class="card-head"><span class="num">12</span><h3>Cycle Diagram</h3></div>
+<p class="best"><b>Best for:</b> life cycles, the design cycle, feedback loops</p>
+<svg class="pv" role="img" aria-label="Sample preview: Cycle Diagram" viewBox="0 0 320 100">
+<text class="t1" x="14" y="18">The Design Cycle</text>
+<circle cx="90" cy="60" r="28" style="fill:none;stroke:var(--a);stroke-opacity:.5;stroke-width:3;stroke-dasharray:6 4"></circle>
+<circle class="a" cx="90" cy="32" r="9"></circle><circle class="a" cx="118" cy="60" r="9"></circle><circle class="a" cx="90" cy="88" r="9"></circle><circle class="a" cx="62" cy="60" r="9"></circle>
+<text class="t2 tw c" x="90" y="35">1</text><text class="t2 tw c" x="118" y="63">2</text><text class="t2 tw c" x="90" y="91">3</text><text class="t2 tw c" x="62" y="63">4</text>
+<text class="t3 c" x="90" y="58" style="font-weight:700;fill:var(--ink)">Design</text><text class="t3 c" x="90" y="66" style="font-weight:700;fill:var(--ink)">Cycle</text>
+<rect class="w" x="150" y="28" width="156" height="66" rx="8"></rect>
+<text class="t2 ta" x="160" y="42">1</text><text class="t2" x="170" y="42">Inquiring and Analysing</text>
+<text class="t2 ta" x="160" y="57">2</text><text class="t2" x="170" y="57">Developing Ideas</text>
+<text class="t2 ta" x="160" y="72">3</text><text class="t2" x="170" y="72">Creating the Solution</text>
+<text class="t2 ta" x="160" y="87">4</text><text class="t2" x="170" y="87">Evaluating</text>
+</svg>
+<div class="prompt" id="info-12-p">Design a circular cycle infographic showing the <span class="ph">[NUMBER]</span> stages of <span class="ph">[CYCLE, e.g. the design cycle]</span>. Arrange the stages around a circle with curved connectors, each stage in its own colour with an icon and a one-line description. Place the cycle name in the centre. Use <span class="ph">[COLOUR PALETTE]</span> and clear sans serif text.</div>
+<button class="copy" type="button" data-copy="info-12-p">Copy prompt</button>
+</article>
+<article class="card" id="info-13" data-search="13 decision tree flowchart tool choices, behaviour plans, troubleshooting">
+<div class="card-head"><span class="num">13</span><h3>Decision Tree Flowchart</h3></div>
+<p class="best"><b>Best for:</b> tool choices, behaviour plans, troubleshooting</p>
+<svg class="pv" role="img" aria-label="Sample preview: Decision Tree Flowchart" viewBox="0 0 320 100">
+<text class="t1" x="14" y="18">Should I Use AI for This Task?</text>
+<path class="sk" d="M122 48H168M232 48H252M90 63V74M200 63V74"></path>
+<path class="a" d="M90 33l32 15-32 15-32-15z"></path><text class="t3 tw c" x="90" y="50" style="font-weight:700">Is AI allowed?</text>
+<path class="a" d="M200 33l32 15-32 15-32-15z"></path><text class="t3 tw c" x="200" y="50" style="font-weight:700">Helps me learn?</text>
+<text class="t3 ta" x="139" y="44" style="font-weight:700">YES</text><text class="t3 ta" x="235" y="44" style="font-weight:700">YES</text>
+<text class="t3 ta" x="94" y="71" style="font-weight:700">NO</text><text class="t3 ta" x="204" y="71" style="font-weight:700">NO</text>
+<rect class="w" x="52" y="74" width="76" height="18" rx="9"></rect><text class="t3 c" x="90" y="85" style="fill:var(--ink);font-weight:600">Ask your teacher</text>
+<rect class="w" x="162" y="74" width="76" height="18" rx="9"></rect><text class="t3 c" x="200" y="85" style="fill:var(--ink);font-weight:600">Do it yourself</text>
+<rect class="m" x="252" y="39" width="58" height="18" rx="9"></rect><text class="t3 c" x="281" y="50" style="fill:var(--ink);font-weight:600">Use it, cite it</text>
+</svg>
+<div class="prompt" id="info-13-p">Create a flowchart decision tree infographic that helps <span class="ph">[AUDIENCE]</span> decide <span class="ph">[DECISION]</span>. Start with one question at the top and branch into YES and NO paths, ending in <span class="ph">[NUMBER]</span> clear outcomes. Use diamond shapes for questions, rounded boxes for outcomes, <span class="ph">[COLOUR PALETTE]</span> and plain language. Questions: <span class="ph">[QUESTIONS]</span>.</div>
+<button class="copy" type="button" data-copy="info-13-p">Copy prompt</button>
+</article>
+<article class="card" id="info-14" data-search="14 hierarchy chart org charts, classification, family trees">
+<div class="card-head"><span class="num">14</span><h3>Hierarchy Chart</h3></div>
+<p class="best"><b>Best for:</b> org charts, classification, family trees</p>
+<svg class="pv" role="img" aria-label="Sample preview: Hierarchy Chart" viewBox="0 0 320 100">
+<text class="t1" x="14" y="18">How a School Is Organised</text>
+<path class="sk" d="M160 40V50M160 64V70M50 70H270M50 70V76M123 70V76M197 70V76M270 70V76"></path>
+<rect class="a" x="120" y="24" width="80" height="16" rx="4"></rect><text class="t2 tw c" x="160" y="35">Principal</text>
+<rect class="m" x="120" y="50" width="80" height="14" rx="4"></rect><text class="t2 c" x="160" y="60">Vice Principal</text>
+<rect class="w" x="18" y="76" width="64" height="16" rx="4"></rect><text class="t3 c" x="50" y="87" style="fill:var(--ink);font-weight:600">English</text>
+<rect class="w" x="91" y="76" width="64" height="16" rx="4"></rect><text class="t3 c" x="123" y="87" style="fill:var(--ink);font-weight:600">Maths</text>
+<rect class="w" x="165" y="76" width="64" height="16" rx="4"></rect><text class="t3 c" x="197" y="87" style="fill:var(--ink);font-weight:600">Science</text>
+<rect class="w" x="238" y="76" width="64" height="16" rx="4"></rect><text class="t3 c" x="270" y="87" style="fill:var(--ink);font-weight:600">Languages</text>
+</svg>
+<div class="prompt" id="info-14-p">Design a hierarchy infographic showing the structure of <span class="ph">[ORGANISATION OR CONCEPT]</span>. Place <span class="ph">[TOP ITEM]</span> at the top and branch down into <span class="ph">[NUMBER]</span> levels with connecting lines. Each box includes a name, a role or definition and a small icon. Use <span class="ph">[COLOUR PALETTE]</span>, with each level in a slightly different shade.</div>
+<button class="copy" type="button" data-copy="info-14-p">Copy prompt</button>
+</article>
+<article class="card" id="info-15" data-search="15 pyramid bloom&#x27;s taxonomy, priorities, needs models">
+<div class="card-head"><span class="num">15</span><h3>Pyramid</h3></div>
+<p class="best"><b>Best for:</b> Bloom's Taxonomy, priorities, needs models</p>
+<svg class="pv" role="img" aria-label="Sample preview: Pyramid" viewBox="0 0 320 100">
+<text class="t1" x="14" y="18">Bloom's Taxonomy</text>
+<path class="a" d="M90 24L101.7 35.2H78.3Z"></path>
+<path class="a" d="M77.8 36.5H102.2L112.8 46.8H67.2Z" style="fill-opacity:.88"></path>
+<path class="a" d="M65.9 48.1H114.1L124.5 58.5H55.5Z" style="fill-opacity:.74"></path>
+<path class="a" d="M54.2 59.8H125.8L136.2 70.2H43.8Z" style="fill-opacity:.6"></path>
+<path class="a" d="M42.5 71.5H137.5L147.9 81.9H32.1Z" style="fill-opacity:.45"></path>
+<path class="a" d="M30.8 83.2H149.2L160 94H20Z" style="fill-opacity:.3"></path>
+<text class="t2" x="172" y="33">Create</text><text class="t3" x="222" y="33">produce new work</text>
+<text class="t2" x="172" y="45">Evaluate</text><text class="t3" x="222" y="45">justify a decision</text>
+<text class="t2" x="172" y="57">Analyse</text><text class="t3" x="222" y="57">find connections</text>
+<text class="t2" x="172" y="69">Apply</text><text class="t3" x="222" y="69">use in new situations</text>
+<text class="t2" x="172" y="81">Understand</text><text class="t3" x="222" y="81">explain ideas</text>
+<text class="t2" x="172" y="93">Remember</text><text class="t3" x="222" y="93">recall facts</text>
+</svg>
+<div class="prompt" id="info-15-p">Create a pyramid infographic with <span class="ph">[NUMBER]</span> layers explaining <span class="ph">[TOPIC, e.g. Bloom's Taxonomy]</span>. Label each layer from base to top, with a short description beside each one and an icon. Use a gradient of <span class="ph">[COLOUR PALETTE]</span> from bottom to top and a clear title above the pyramid.</div>
+<button class="copy" type="button" data-copy="info-15-p">Copy prompt</button>
+</article>
+<article class="card" id="info-16" data-search="16 funnel narrowing ideas, research, admissions">
+<div class="card-head"><span class="num">16</span><h3>Funnel</h3></div>
+<p class="best"><b>Best for:</b> narrowing ideas, research, admissions</p>
+<svg class="pv" role="img" aria-label="Sample preview: Funnel" viewBox="0 0 320 100">
+<text class="t1" x="14" y="18">From Research to a Strong Answer</text>
+<path class="a" d="M20 26H200L188 41H32Z" style="fill-opacity:.35"></path><text class="t2 c" x="110" y="36">Search widely</text>
+<path class="a" d="M34 44H186L174 59H46Z" style="fill-opacity:.55"></path><text class="t2 c" x="110" y="54">Skim and filter</text>
+<path class="a" d="M48 62H172L160 77H60Z" style="fill-opacity:.78"></path><text class="t2 tw c" x="110" y="72">Read closely</text>
+<path class="a" d="M62 80H158L146 95H74Z"></path><text class="t2 tw c" x="110" y="90">Synthesise</text>
+<rect class="w" x="214" y="34" width="92" height="52" rx="8"></rect>
+<text class="t2 ta" x="222" y="48">Takeaway</text><text class="t3" x="222" y="60" style="fill:var(--ink)">Fewer, better sources</text><text class="t3" x="222" y="69" style="fill:var(--ink)">lead to stronger,</text><text class="t3" x="222" y="78" style="fill:var(--ink)">clearer answers.</text>
+</svg>
+<div class="prompt" id="info-16-p">Design a funnel infographic showing how <span class="ph">[STARTING GROUP]</span> narrows down to <span class="ph">[END RESULT]</span> through <span class="ph">[NUMBER]</span> stages: <span class="ph">[STAGES]</span>. Each stage has a label, a number or percentage and a short note. Use <span class="ph">[COLOUR PALETTE]</span> that deepens toward the bottom and add a takeaway box beside the funnel.</div>
+<button class="copy" type="button" data-copy="info-16-p">Copy prompt</button>
+</article>
+</div>
+</section><section class="sec" id="info-s4" style="--a:#2F7D3A;--t:#E6F2E7" aria-labelledby="info-s4-h">
+<div class="sec-head">
+<div><p class="kicker">Section 4</p><h2 id="info-s4-h">Compare, Connect and Track</h2></div>
+<p class="range">17 to 22</p>
+</div>
+<div class="grid">
+<article class="card" id="info-17" data-search="17 mind map brainstorming, vocabulary webs, unit planning">
+<div class="card-head"><span class="num">17</span><h3>Mind Map</h3></div>
+<p class="best"><b>Best for:</b> brainstorming, vocabulary webs, unit planning</p>
+<svg class="pv" role="img" aria-label="Sample preview: Mind Map" viewBox="0 0 320 100">
+<text class="t1" x="14" y="16">Healthy Habits</text>
+<path d="M128 54C104 50 104 37 88 37M128 64C104 68 104 83 88 83M192 54C216 50 216 37 232 37M192 64C216 68 216 83 232 83" style="fill:none;stroke:var(--a);stroke-width:2;stroke-linecap:round"></path>
+<ellipse class="a" cx="160" cy="59" rx="34" ry="14"></ellipse><text class="t2 tw c" x="160" y="62">Healthy Me</text>
+<rect class="w" x="18" y="26" width="70" height="22" rx="6"></rect><text class="t2" x="25" y="35">Sleep</text><text class="t3" x="25" y="44">Same bedtime</text>
+<rect class="w" x="18" y="72" width="70" height="22" rx="6"></rect><text class="t2" x="25" y="81">Movement</text><text class="t3" x="25" y="90">60 minutes a day</text>
+<rect class="w" x="232" y="26" width="70" height="22" rx="6"></rect><text class="t2" x="239" y="35">Food</text><text class="t3" x="239" y="44">Eat the rainbow</text>
+<rect class="w" x="232" y="72" width="70" height="22" rx="6"></rect><text class="t2" x="239" y="81">Hydration</text><text class="t3" x="239" y="90">Refill your bottle</text>
+</svg>
+<div class="prompt" id="info-17-p">Create a mind map infographic with <span class="ph">[CENTRAL TOPIC]</span> in the centre and <span class="ph">[NUMBER]</span> main branches: <span class="ph">[BRANCHES]</span>. Add 2 to 3 sub-ideas on each branch, using a different colour per branch, small icons and curved organic lines. Keep text to keywords only. Style: <span class="ph">[STYLE, e.g. clean digital or hand drawn]</span>.</div>
+<button class="copy" type="button" data-copy="info-17-p">Copy prompt</button>
+</article>
+<article class="card" id="info-18" data-search="18 venn diagram similarities, differences, shared skills">
+<div class="card-head"><span class="num">18</span><h3>Venn Diagram</h3></div>
+<p class="best"><b>Best for:</b> similarities, differences, shared skills</p>
+<svg class="pv" role="img" aria-label="Sample preview: Venn Diagram" viewBox="0 0 320 100">
+<text class="t1" x="14" y="16">Mandarin and English</text>
+<circle cx="128" cy="60" r="36" style="fill:var(--a);fill-opacity:.55"></circle><circle cx="192" cy="60" r="36" style="fill:#fff;fill-opacity:.7;stroke:var(--a);stroke-width:1.5"></circle>
+<text class="t2 tw c" x="112" y="42">Mandarin</text><text class="t2 c" x="208" y="42">English</text>
+<text class="t3 c" x="108" y="60" style="fill:#fff;font-weight:600">Tones change</text><text class="t3 c" x="108" y="68" style="fill:#fff;font-weight:600">meaning</text><text class="t3 c" x="108" y="80" style="fill:#fff;font-weight:600">Characters</text>
+<text class="t3 c" x="160" y="58" style="fill:var(--ink);font-weight:700">Subject</text><text class="t3 c" x="160" y="66" style="fill:var(--ink);font-weight:700">Verb</text><text class="t3 c" x="160" y="74" style="fill:var(--ink);font-weight:700">Object</text>
+<text class="t3 c" x="212" y="60" style="fill:var(--ink);font-weight:600">26-letter</text><text class="t3 c" x="212" y="68" style="fill:var(--ink);font-weight:600">alphabet</text><text class="t3 c" x="212" y="80" style="fill:var(--ink);font-weight:600">Verb tenses</text>
+<text class="t3" x="244" y="30">Shared word order</text><text class="t3" x="244" y="38">sits in the overlap</text>
+</svg>
+<div class="prompt" id="info-18-p">Design a Venn diagram infographic comparing <span class="ph">[A]</span>, <span class="ph">[B]</span> and <span class="ph">[C IF NEEDED]</span>. Show <span class="ph">[NUMBER]</span> overlapping circles in semi-transparent <span class="ph">[COLOURS]</span>, list unique features in each circle and shared features in the overlaps. Add a title and a one-sentence summary underneath. Content: <span class="ph">[FEATURES]</span>.</div>
+<button class="copy" type="button" data-copy="info-18-p">Copy prompt</button>
+</article>
+<article class="card" id="info-19" data-search="19 myth vs fact misconceptions, ai literacy, health topics">
+<div class="card-head"><span class="num">19</span><h3>Myth vs Fact</h3></div>
+<p class="best"><b>Best for:</b> misconceptions, AI literacy, health topics</p>
+<svg class="pv" role="img" aria-label="Sample preview: Myth vs Fact" viewBox="0 0 320 100">
+<text class="t1" x="14" y="16">AI: Myth or Fact?</text>
+<rect class="w" x="14" y="24" width="142" height="70" rx="8"></rect><rect class="a" x="164" y="24" width="142" height="70" rx="8"></rect>
+<circle cx="28" cy="36" r="6" style="fill:#C8432E"></circle><path class="sw" d="M25.5 33.5l5 5M30.5 33.5l-5 5" style="stroke-width:1.5"></path><text class="t2" x="38" y="39">MYTH</text>
+<circle class="w" cx="178" cy="36" r="6"></circle><path d="M175.5 36l2 2 3.5-4" style="fill:none;stroke:var(--a);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"></path><text class="t2 tw" x="188" y="39">FACT</text>
+<text class="t3" x="24" y="55" style="fill:var(--ink)">AI understands like a human.</text><text class="t3" x="24" y="69" style="fill:var(--ink)">AI is always correct.</text><text class="t3" x="24" y="83" style="fill:var(--ink)">AI replaces thinking.</text>
+<text class="t3 tw" x="174" y="55">AI predicts patterns in data.</text><text class="t3 tw" x="174" y="69">AI can make confident mistakes.</text><text class="t3 tw" x="174" y="83">AI works best as a thinking partner.</text>
+<path d="M24 60H146M24 74H146" style="stroke:var(--ink);stroke-opacity:.12;stroke-width:1"></path><path d="M174 60H296M174 74H296" style="stroke:#fff;stroke-opacity:.3;stroke-width:1"></path>
+</svg>
+<div class="prompt" id="info-19-p">Design a myth versus fact infographic about <span class="ph">[TOPIC]</span>. Present <span class="ph">[NUMBER]</span> rows, each with a myth on the left marked with a red cross icon and the matching fact on the right marked with a green tick icon. Keep each statement to one sentence. Use a clean two-column layout and <span class="ph">[COLOUR PALETTE]</span>.</div>
+<button class="copy" type="button" data-copy="info-19-p">Copy prompt</button>
+</article>
+<article class="card" id="info-20" data-search="20 before and after impact stories, transformations, reflections">
+<div class="card-head"><span class="num">20</span><h3>Before and After</h3></div>
+<p class="best"><b>Best for:</b> impact stories, transformations, reflections</p>
+<svg class="pv" role="img" aria-label="Sample preview: Before and After" viewBox="0 0 320 100">
+<text class="t1" x="14" y="16">Our Feedback Routine</text>
+<rect class="w" x="14" y="24" width="136" height="70" rx="8"></rect><rect class="a" x="170" y="24" width="136" height="70" rx="8"></rect>
+<text class="t2" x="24" y="38" style="fill:var(--mut);letter-spacing:1px">BEFORE</text><text class="t2 tw" x="180" y="38" style="letter-spacing:1px">AFTER</text>
+<text class="t3" x="24" y="54" style="fill:var(--ink)">Feedback only at the end</text><text class="t3" x="24" y="66" style="fill:var(--ink)">Students wait for a grade</text><text class="t3" x="24" y="78" style="fill:var(--ink)">One final draft</text>
+<text class="t3 tw" x="180" y="54">Feedback during the project</text><text class="t3 tw" x="180" y="66">Students act on comments</text><text class="t3 tw" x="180" y="78">Several improved drafts</text>
+<circle class="w" cx="160" cy="59" r="10" style="stroke:var(--a);stroke-width:1.5"></circle><path class="s" d="M157 54l5 5-5 5" style="stroke-width:2"></path>
+<rect class="m" x="24" y="84" width="20" height="4" rx="2"></rect><rect class="w" x="180" y="84" width="60" height="4" rx="2"></rect>
+</svg>
+<div class="prompt" id="info-20-p">Design a before and after infographic showing the impact of <span class="ph">[CHANGE OR INTERVENTION]</span> on <span class="ph">[SUBJECT]</span>. Split the canvas into BEFORE (muted <span class="ph">[COLOUR A]</span>) and AFTER (bright <span class="ph">[COLOUR B]</span>), with <span class="ph">[NUMBER]</span> matching comparison points on each side. Add a headline stating the improvement and one key statistic.</div>
+<button class="copy" type="button" data-copy="info-20-p">Copy prompt</button>
+</article>
+<article class="card" id="info-21" data-search="21 checklist card routines, success criteria, safety rules">
+<div class="card-head"><span class="num">21</span><h3>Checklist Card</h3></div>
+<p class="best"><b>Best for:</b> routines, success criteria, safety rules</p>
+<svg class="pv" role="img" aria-label="Sample preview: Checklist Card" viewBox="0 0 320 100">
+<text class="t1" x="14" y="16">Before You Submit Your Project</text>
+<rect class="a" x="14" y="25" width="10" height="10" rx="2"></rect><path class="sw" d="M16.5 30l2 2 3.5-4" style="stroke-width:1.5"></path><text class="t2" x="30" y="33">Answer the driving question</text>
+<rect class="a" x="14" y="39" width="10" height="10" rx="2"></rect><path class="sw" d="M16.5 44l2 2 3.5-4" style="stroke-width:1.5"></path><text class="t2" x="30" y="47">Cite every source you used</text>
+<rect class="a" x="14" y="53" width="10" height="10" rx="2"></rect><path class="sw" d="M16.5 58l2 2 3.5-4" style="stroke-width:1.5"></path><text class="t2" x="30" y="61">Check spelling and labels</text>
+<rect class="w" x="14" y="67" width="10" height="10" rx="2" style="stroke:var(--a);stroke-width:1.2"></rect><text class="t2" x="30" y="75">Add alt text to images</text>
+<rect class="w" x="14" y="81" width="10" height="10" rx="2" style="stroke:var(--a);stroke-width:1.2"></rect><text class="t2" x="30" y="89">Complete a peer review</text>
+<rect class="w" x="200" y="26" width="106" height="66" rx="8"></rect>
+<text class="tb ta" x="212" y="54" style="font-size:22px">3 of 5</text><text class="t3" x="212" y="66">steps complete</text>
+<rect class="m" x="212" y="74" width="82" height="6" rx="3" style="fill-opacity:.25"></rect><rect class="a" x="212" y="74" width="49" height="6" rx="3"></rect>
+</svg>
+<div class="prompt" id="info-21-p">Create a checklist infographic titled <span class="ph">[TITLE]</span> for <span class="ph">[AUDIENCE]</span>. List <span class="ph">[NUMBER]</span> items with tick boxes, each with a bold action phrase and a short tip. Group items under mini headings if needed. Use <span class="ph">[COLOUR PALETTE]</span>, plenty of spacing and a footer with <span class="ph">[SCHOOL OR BRAND NAME]</span>. Items: <span class="ph">[LIST]</span>.</div>
+<button class="copy" type="button" data-copy="info-21-p">Copy prompt</button>
+</article>
+<article class="card" id="info-22" data-search="22 gauge progress meter goals, targets, progress tracking">
+<div class="card-head"><span class="num">22</span><h3>Gauge Progress Meter</h3></div>
+<p class="best"><b>Best for:</b> goals, targets, progress tracking</p>
+<svg class="pv" role="img" aria-label="Sample preview: Gauge Progress Meter" viewBox="0 0 320 100">
+<text class="t1" x="14" y="16">Unit Goals Progress</text><text class="t3 e" x="306" y="16">Sample data</text>
+<path d="M32 74A28 28 0 0 1 88 74" style="fill:none;stroke:#fff;stroke-width:8;stroke-linecap:round"></path><path d="M32 74A28 28 0 0 1 79.8 54.2" style="fill:none;stroke:var(--a);stroke-width:8;stroke-linecap:round"></path>
+<path d="M132 74A28 28 0 0 1 188 74" style="fill:none;stroke:#fff;stroke-width:8;stroke-linecap:round"></path><path d="M132 74A28 28 0 0 1 168.7 47.4" style="fill:none;stroke:#C98A12;stroke-width:8;stroke-linecap:round"></path>
+<path d="M232 74A28 28 0 0 1 288 74" style="fill:none;stroke:#fff;stroke-width:8;stroke-linecap:round"></path><path d="M232 74A28 28 0 0 1 251.4 47.4" style="fill:none;stroke:#C8432E;stroke-width:8;stroke-linecap:round"></path>
+<text class="t1 c" x="60" y="72" style="font-size:12px">75%</text><text class="t1 c" x="160" y="72" style="font-size:12px">60%</text><text class="t1 c" x="260" y="72" style="font-size:12px">40%</text>
+<text class="t2 c" x="60" y="90">Reading</text><text class="t2 c" x="160" y="90">Vocabulary</text><text class="t2 c" x="260" y="90">Speaking</text>
+</svg>
+<div class="prompt" id="info-22-p">Design a progress infographic using <span class="ph">[NUMBER]</span> gauge meters to show <span class="ph">[GOALS OR METRICS]</span> for <span class="ph">[TOPIC]</span>. Each gauge shows a percentage, a label and a status colour (red, amber, green). Use a clean card layout, <span class="ph">[COLOUR PALETTE]</span> and the title <span class="ph">[TITLE]</span>.</div>
+<button class="copy" type="button" data-copy="info-22-p">Copy prompt</button>
+</article>
+</div>
+</section><section class="sec" id="info-s5" style="--a:#6B44C4;--t:#EEE8FA" aria-labelledby="info-s5-h">
+<div class="sec-head">
+<div><p class="kicker">Section 5</p><h2 id="info-s5-h">Storytelling and Classroom</h2></div>
+<p class="range">23 to 28</p>
+</div>
+<div class="grid">
+<article class="card" id="info-23" data-search="23 comic strip storyboard concepts, scenarios, language practice">
+<div class="card-head"><span class="num">23</span><h3>Comic Strip Storyboard</h3></div>
+<p class="best"><b>Best for:</b> concepts, scenarios, language practice</p>
+<svg class="pv" role="img" aria-label="Sample preview: Comic Strip Storyboard" viewBox="0 0 320 100">
+<text class="t1" x="14" y="16">Why Do We Cite Our Sources?</text>
+<rect class="w" x="14" y="23" width="94" height="70" rx="4" style="stroke:var(--ink);stroke-width:1.2"></rect>
+<rect class="w" x="113" y="23" width="94" height="70" rx="4" style="stroke:var(--ink);stroke-width:1.2"></rect>
+<rect class="w" x="212" y="23" width="94" height="70" rx="4" style="stroke:var(--ink);stroke-width:1.2"></rect>
+<rect x="20" y="29" width="70" height="20" rx="8" style="fill:var(--t);stroke:var(--ink);stroke-width:.8"></rect><text class="t3 c" x="55" y="37" style="fill:var(--ink);font-weight:600">I found this</text><text class="t3 c" x="55" y="45" style="fill:var(--ink);font-weight:600">online!</text>
+<circle class="a" cx="44" cy="64" r="8"></circle><rect class="a" x="34" y="73" width="20" height="18" rx="8"></rect>
+<rect x="128" y="29" width="70" height="20" rx="8" style="fill:var(--t);stroke:var(--ink);stroke-width:.8"></rect><text class="t3 c" x="163" y="37" style="fill:var(--ink);font-weight:600">Who wrote it?</text><text class="t3 c" x="163" y="45" style="fill:var(--ink);font-weight:600">Can we check?</text>
+<circle class="m" cx="180" cy="64" r="8"></circle><rect class="m" x="170" y="73" width="20" height="18" rx="8"></rect><circle class="a" cx="136" cy="68" r="6"></circle><rect class="a" x="128" y="75" width="16" height="16" rx="7"></rect>
+<rect x="218" y="29" width="82" height="20" rx="8" style="fill:var(--t);stroke:var(--ink);stroke-width:.8"></rect><text class="t3 c" x="259" y="37" style="fill:var(--ink);font-weight:600">I'll cite it so others</text><text class="t3 c" x="259" y="45" style="fill:var(--ink);font-weight:600">can check it too!</text>
+<circle class="a" cx="248" cy="64" r="8"></circle><rect class="a" x="238" y="73" width="20" height="18" rx="8"></rect><path class="s" d="M272 62l4 4 8-9" style="stroke-width:2"></path>
+</svg>
+<div class="prompt" id="info-23-p">Create a <span class="ph">[NUMBER]</span>-panel comic strip infographic explaining <span class="ph">[CONCEPT]</span> to <span class="ph">[AUDIENCE]</span>. Feature <span class="ph">[CHARACTER DESCRIPTION]</span> in each panel with speech bubbles of short, clear dialogue. Panel 1 introduces the problem, the middle panels explain, and the final panel gives the lesson. Bright, friendly cartoon style with bold outlines.</div>
+<button class="copy" type="button" data-copy="info-23-p">Copy prompt</button>
+</article>
+<article class="card" id="info-24" data-search="24 profile card historical figures, characters, careers">
+<div class="card-head"><span class="num">24</span><h3>Profile Card</h3></div>
+<p class="best"><b>Best for:</b> historical figures, characters, careers</p>
+<svg class="pv" role="img" aria-label="Sample preview: Profile Card" viewBox="0 0 320 100">
+<rect class="w" x="14" y="10" width="292" height="82" rx="10"></rect>
+<circle class="a" cx="50" cy="51" r="25"></circle><circle class="w" cx="50" cy="45" r="8"></circle><path class="w" d="M35 70c2-9 8-13 15-13s13 4 15 13z"></path>
+<text class="t1" x="88" y="30" style="font-size:12px">Ada Lovelace</text><text class="t3" x="88" y="40">Mathematician, 1815 to 1852</text>
+<circle class="a" cx="91" cy="53" r="2"></circle><text class="t3" x="97" y="55" style="fill:var(--ink)">Wrote an early computer algorithm</text>
+<circle class="a" cx="91" cy="65" r="2"></circle><text class="t3" x="97" y="67" style="fill:var(--ink)">Worked with Charles Babbage</text>
+<circle class="a" cx="91" cy="77" r="2"></circle><text class="t3" x="97" y="79" style="fill:var(--ink)">Imagined computers making music</text>
+<text class="t2 ta" x="228" y="30">Key Traits</text>
+<text class="t3" x="228" y="44">Logic</text><rect class="m" x="228" y="47" width="66" height="5" rx="2.5" style="fill-opacity:.2"></rect><rect class="a" x="228" y="47" width="60" height="5" rx="2.5"></rect>
+<text class="t3" x="228" y="62">Imagination</text><rect class="m" x="228" y="65" width="66" height="5" rx="2.5" style="fill-opacity:.2"></rect><rect class="a" x="228" y="65" width="56" height="5" rx="2.5"></rect>
+<text class="t3" x="228" y="80">Persistence</text><rect class="m" x="228" y="83" width="66" height="5" rx="2.5" style="fill-opacity:.2"></rect><rect class="a" x="228" y="83" width="50" height="5" rx="2.5"></rect>
+</svg>
+<div class="prompt" id="info-24-p">Create a profile card infographic about <span class="ph">[PERSON, CHARACTER OR ROLE]</span>. Include a portrait illustration, name and title, a short bio, <span class="ph">[NUMBER]</span> key facts with icons, a quote bubble and a skills or traits bar section. Use a modern card layout with <span class="ph">[COLOUR PALETTE]</span> and rounded corners.</div>
+<button class="copy" type="button" data-copy="info-24-p">Copy prompt</button>
+</article>
+<article class="card" id="info-25" data-search="25 q and a cards parent guides, policy explainers, revision">
+<div class="card-head"><span class="num">25</span><h3>Q and A Cards</h3></div>
+<p class="best"><b>Best for:</b> parent guides, policy explainers, revision</p>
+<svg class="pv" role="img" aria-label="Sample preview: Q and A Cards" viewBox="0 0 320 100">
+<text class="t1" x="14" y="16">AI in Class: Parent FAQ</text>
+<rect class="w" x="14" y="24" width="142" height="33" rx="6"></rect><path class="a" d="M14 30a6 6 0 0 1 6-6h130a6 6 0 0 1 6 6v6H14z"></path><text class="t3 tw" x="20" y="33" style="font-weight:700">Q. Can students use AI?</text><text class="t3" x="20" y="49" style="fill:var(--ink)">Yes, with clear teacher guidance.</text>
+<rect class="w" x="164" y="24" width="142" height="33" rx="6"></rect><path class="a" d="M164 30a6 6 0 0 1 6-6h130a6 6 0 0 1 6 6v6H164z"></path><text class="t3 tw" x="170" y="33" style="font-weight:700">Q. Will AI replace teachers?</text><text class="t3" x="170" y="49" style="fill:var(--ink)">No, it supports their work.</text>
+<rect class="w" x="14" y="61" width="142" height="33" rx="6"></rect><path class="a" d="M14 67a6 6 0 0 1 6-6h130a6 6 0 0 1 6 6v6H14z"></path><text class="t3 tw" x="20" y="70" style="font-weight:700">Q. How is learning checked?</text><text class="t3" x="20" y="86" style="fill:var(--ink)">Through drafts and conversations.</text>
+<rect class="w" x="164" y="61" width="142" height="33" rx="6"></rect><path class="a" d="M164 67a6 6 0 0 1 6-6h130a6 6 0 0 1 6 6v6H164z"></path><text class="t3 tw" x="170" y="70" style="font-weight:700">Q. How can I help at home?</text><text class="t3" x="170" y="86" style="fill:var(--ink)">Ask your child to explain their thinking.</text>
+</svg>
+<div class="prompt" id="info-25-p">Design a Q and A infographic answering the <span class="ph">[NUMBER]</span> most common questions about <span class="ph">[TOPIC]</span> for <span class="ph">[AUDIENCE]</span>. Show each question in bold inside a coloured tab, with a concise 1 to 2 sentence answer below. Arrange the cards in a tidy grid with <span class="ph">[COLOUR PALETTE]</span> and a clear title. Questions: <span class="ph">[LIST]</span>.</div>
+<button class="copy" type="button" data-copy="info-25-p">Copy prompt</button>
+</article>
+<article class="card" id="info-26" data-search="26 bento grid modern summaries, project showcases, linkedin">
+<div class="card-head"><span class="num">26</span><h3>Bento Grid</h3></div>
+<p class="best"><b>Best for:</b> modern summaries, project showcases, LinkedIn</p>
+<svg class="pv" role="img" aria-label="Sample preview: Bento Grid" viewBox="0 0 320 100">
+<rect class="a" x="14" y="10" width="122" height="82" rx="10"></rect>
+<text class="t3 tw" x="24" y="26" style="font-weight:700;letter-spacing:1px">PBL SHOWCASE</text><text class="t1 tw" x="24" y="52" style="font-size:13px">Build a</text><text class="t1 tw" x="24" y="67" style="font-size:13px">Rescue Robot</text><text class="t3 tw" x="24" y="82">Sample project overview</text>
+<rect class="w" x="142" y="10" width="78" height="38" rx="10"></rect><text class="tb ta" x="152" y="34">24</text><text class="t3" x="152" y="43">students</text>
+<rect class="m" x="226" y="10" width="80" height="38" rx="10"></rect><text class="tb" x="236" y="34" style="fill:var(--ink)">6</text><text class="t3" x="236" y="43" style="fill:var(--ink)">weeks of making</text>
+<rect class="w" x="142" y="54" width="100" height="38" rx="10"></rect><text class="t3" x="152" y="68" style="font-weight:700;fill:var(--a)">TEAM MOTTO</text><text class="t2" x="152" y="81">Fail forward, then iterate.</text>
+<rect class="k" x="248" y="54" width="58" height="38" rx="10"></rect><text class="t3 tw" x="256" y="68" style="font-weight:700">KEY TERM</text><text class="t2 tw" x="256" y="81">Sensor</text>
+</svg>
+<div class="prompt" id="info-26-p">Create a bento grid infographic about <span class="ph">[TOPIC]</span>. Arrange <span class="ph">[NUMBER]</span> rounded tiles of different sizes in a tight grid: one large hero tile with the main message, plus smaller tiles for statistics, icons, a quote and a key term. Use <span class="ph">[COLOUR PALETTE]</span>, soft shadows and modern sans serif typography.</div>
+<button class="copy" type="button" data-copy="info-26-p">Copy prompt</button>
+</article>
+<article class="card" id="info-27" data-search="27 hand drawn sketchnote lesson summaries, pd notes, conference recaps">
+<div class="card-head"><span class="num">27</span><h3>Hand Drawn Sketchnote</h3></div>
+<p class="best"><b>Best for:</b> lesson summaries, PD notes, conference recaps</p>
+<svg class="pv" role="img" aria-label="Sample preview: Hand Drawn Sketchnote" viewBox="0 0 320 100">
+<rect x="0" y="0" width="320" height="100" rx="8" style="fill:#FFFDF7"></rect>
+<path class="a" d="M12 10l104 2-4 9 4 9-104-2 4-9z"></path><text class="hw tw" x="20" y="25" style="font-size:14px">The Water Cycle</text>
+<circle cx="40" cy="62" r="11" style="fill:#F6D776;stroke:var(--ink);stroke-width:1.2"></circle><path class="sk" d="M40 45v-4M40 79v4M23 62h-4M57 62h4M28 50l-3-3M52 50l3-3M28 74l-3 3M52 74l3 3"></path>
+<path d="M146 50c-7 0-8-10 0-10 1-8 12-10 16-3 3-6 14-5 15 2 8 0 9 11 1 11z" style="fill:var(--a);fill-opacity:.3;stroke:var(--ink);stroke-width:1.2;stroke-linejoin:round"></path>
+<path class="sk" d="M150 58l-2 6M160 58l-2 6M170 58l-2 6M155 68l-2 6M165 68l-2 6"></path>
+<path d="M200 86c8-6 14 6 22 0s14 6 22 0 14 6 22 0 14 6 22 0" style="fill:none;stroke:var(--a);stroke-width:2;stroke-linecap:round"></path>
+<path d="M62 54c18-14 46-16 72-10M184 46c24 2 40 14 46 32" style="fill:none;stroke:var(--ink);stroke-width:1;stroke-dasharray:3 3"></path>
+<text class="hw" x="62" y="88" style="font-size:12px;fill:var(--ink)">1. evaporation</text>
+<text class="hw" x="130" y="30" style="font-size:12px;fill:var(--ink)">2. condensation</text>
+<text class="hw" x="180" y="66" style="font-size:12px;fill:var(--ink)">3. precipitation</text>
+<text class="hw" x="236" y="96" style="font-size:12px;fill:var(--ink)">4. collection</text>
+</svg>
+<div class="prompt" id="info-27-p">Create a hand-drawn sketchnote infographic summarising <span class="ph">[TOPIC, LESSON OR TALK]</span>. Use doodled icons, hand-lettered headings, banners, connecting lines and small illustrations around <span class="ph">[NUMBER]</span> key ideas. Keep a limited palette of black ink plus <span class="ph">[ACCENT COLOUR]</span>. Key ideas: <span class="ph">[LIST]</span>.</div>
+<button class="copy" type="button" data-copy="info-27-p">Copy prompt</button>
+</article>
+<article class="card" id="info-28" data-search="28 chalkboard classroom displays, maths, vocabulary">
+<div class="card-head"><span class="num">28</span><h3>Chalkboard</h3></div>
+<p class="best"><b>Best for:</b> classroom displays, maths, vocabulary</p>
+<svg class="pv" role="img" aria-label="Sample preview: Chalkboard" viewBox="0 0 320 100">
+<rect x="0" y="0" width="320" height="100" rx="8" style="fill:#8B6A45"></rect><rect x="5" y="5" width="310" height="90" rx="4" style="fill:#2F4A3D"></rect>
+<text class="hw" x="16" y="26" style="font-size:16px;fill:#F4F1E8">Area of a Rectangle</text>
+<path d="M16 31h120" style="stroke:#F4F1E8;stroke-opacity:.6;stroke-width:1.2;stroke-linecap:round"></path>
+<rect x="30" y="44" width="96" height="36" style="fill:none;stroke:#F2D06B;stroke-width:1.8;stroke-linejoin:round"></rect>
+<text class="hw c" x="78" y="40" style="font-size:11px;fill:#F2D06B">length = 6 cm</text>
+<text class="hw" x="130" y="66" style="font-size:11px;fill:#F2D06B">width = 3 cm</text>
+<text class="hw" x="200" y="46" style="font-size:16px;fill:#F2A7C3">A = l x w</text>
+<text class="hw" x="200" y="68" style="font-size:14px;fill:#F4F1E8">A = 6 x 3</text>
+<text class="hw" x="200" y="86" style="font-size:14px;fill:#F4F1E8">A = 18 cm²</text>
+<rect x="262" y="76" width="40" height="5" rx="2" style="fill:#F4F1E8;fill-opacity:.8"></rect>
+</svg>
+<div class="prompt" id="info-28-p">Create a chalkboard-style infographic teaching <span class="ph">[CONCEPT]</span> to <span class="ph">[AUDIENCE]</span>. Use a dark green chalkboard background, chalk-textured hand lettering, simple chalk doodles and coloured chalk highlights in <span class="ph">[COLOURS]</span>. Organise the content into <span class="ph">[NUMBER]</span> boxed sections with clear headings.</div>
+<button class="copy" type="button" data-copy="info-28-p">Copy prompt</button>
+</article>
+</div>
+</section><section class="sec" id="info-s6" style="--a:#1F6F8B;--t:#E2EFF4" aria-labelledby="info-s6-h">
+<div class="sec-head">
+<div><p class="kicker">Section 6</p><h2 id="info-s6-h">Maps and Labelled Places</h2></div>
+<p class="range">29 to 34</p>
+</div>
+<div class="grid">
+<article class="card" id="info-29" data-search="29 map based geography, cultures, local and global data">
+<div class="card-head"><span class="num">29</span><h3>Map Based</h3></div>
+<p class="best"><b>Best for:</b> geography, cultures, local and global data</p>
+<svg class="pv" role="img" aria-label="Sample preview: Map Based" viewBox="0 0 320 100">
+<text class="t1" x="14" y="16">The Seven Emirates of the UAE</text>
+<path class="w" d="M24 74C60 68 100 62 140 52S200 34 226 22L238 25L246 40L252 62L240 82L200 90L120 93L30 92Z" style="stroke:var(--a);stroke-width:1.2"></path>
+<path d="M24 74C60 68 100 62 140 52S200 34 226 22" style="fill:none;stroke:var(--a);stroke-opacity:.3;stroke-width:5"></path>
+<circle class="a" cx="92" cy="72" r="5"></circle><text class="t3 tw c" x="92" y="74.5" style="font-weight:700">1</text>
+<circle class="a" cx="156" cy="52" r="5"></circle><text class="t3 tw c" x="156" y="54.5" style="font-weight:700">2</text>
+<circle class="a" cx="172" cy="45" r="5"></circle><text class="t3 tw c" x="172" y="47.5" style="font-weight:700">3</text>
+<circle class="a" cx="186" cy="38" r="5"></circle><text class="t3 tw c" x="186" y="40.5" style="font-weight:700">4</text>
+<circle class="a" cx="201" cy="32" r="5"></circle><text class="t3 tw c" x="201" y="34.5" style="font-weight:700">5</text>
+<circle class="a" cx="224" cy="30" r="5"></circle><text class="t3 tw c" x="224" y="32.5" style="font-weight:700">6</text>
+<circle class="a" cx="242" cy="60" r="5"></circle><text class="t3 tw c" x="242" y="62.5" style="font-weight:700">7</text>
+<text class="t3" x="260" y="32" style="fill:var(--ink)">1 Abu Dhabi</text><text class="t3" x="260" y="42" style="fill:var(--ink)">2 Dubai</text><text class="t3" x="260" y="52" style="fill:var(--ink)">3 Sharjah</text><text class="t3" x="260" y="62" style="fill:var(--ink)">4 Ajman</text><text class="t3" x="260" y="72" style="fill:var(--ink)">5 Umm Al Quwain</text><text class="t3" x="260" y="82" style="fill:var(--ink)">6 Ras Al Khaimah</text><text class="t3" x="260" y="92" style="fill:var(--ink)">7 Fujairah</text>
+</svg>
+<div class="prompt" id="info-29-p">Create a map-based infographic of <span class="ph">[REGION, e.g. the UAE]</span> showing <span class="ph">[TOPIC]</span>. Mark <span class="ph">[NUMBER]</span> locations with pins, each linked to a callout containing a name, an icon and one fact. Use a simplified flat map, <span class="ph">[COLOUR PALETTE]</span> and a small legend in the corner. Locations: <span class="ph">[LIST OF PLACES]</span>.</div>
+<button class="copy" type="button" data-copy="info-29-p">Copy prompt</button>
+</article>
+<article class="card" id="info-30" data-search="30 map route flowchart process journeys, field trips, story plots">
+<div class="card-head"><span class="num">30</span><h3>Map Route Flowchart</h3></div>
+<p class="best"><b>Best for:</b> process journeys, field trips, story plots</p>
+<svg class="pv" role="img" aria-label="Sample preview: Map Route Flowchart" viewBox="0 0 320 100">
+<text class="t1" x="14" y="16">How Water Reaches Our Taps</text>
+<rect class="w" x="10" y="22" width="300" height="74" rx="8"></rect>
+<path d="M10 70C30 66 40 80 60 78V96H18a8 8 0 0 1-8-8z" style="fill:var(--a);fill-opacity:.3"></path>
+<path d="M120 30c20-6 40 4 60-2M200 90c20 4 40-6 60-2" style="fill:none;stroke:var(--a);stroke-opacity:.2;stroke-width:6;stroke-linecap:round"></path>
+<path d="M34 76C60 76 70 46 96 46S136 72 160 72S196 44 222 44S262 70 286 70" style="fill:none;stroke:var(--a);stroke-width:1.6;stroke-dasharray:3 3;stroke-linecap:round"></path>
+<circle class="a" cx="34" cy="76" r="7"></circle><circle class="a" cx="96" cy="46" r="7"></circle><circle class="a" cx="160" cy="72" r="7"></circle><circle class="a" cx="222" cy="44" r="7"></circle><circle class="a" cx="286" cy="70" r="7"></circle>
+<text class="t2 tw c" x="34" y="79">1</text><text class="t2 tw c" x="96" y="49">2</text><text class="t2 tw c" x="160" y="75">3</text><text class="t2 tw c" x="222" y="47">4</text><text class="t2 tw c" x="286" y="73">5</text>
+<text class="t3 c" x="40" y="62" style="fill:var(--ink);font-weight:600">Sea water</text>
+<text class="t3 c" x="96" y="34" style="fill:var(--ink);font-weight:600">Desalination</text>
+<text class="t3 c" x="160" y="89" style="fill:var(--ink);font-weight:600">Reservoir</text>
+<text class="t3 c" x="222" y="32" style="fill:var(--ink);font-weight:600">Pipelines</text>
+<text class="t3 c" x="286" y="88" style="fill:var(--ink);font-weight:600">Your tap</text>
+<path class="a" d="M292 22h10l-3 3 3 3h-10z"></path><path class="sk" d="M292 22v12"></path>
+</svg>
+<div class="prompt" id="info-30-p">Create a map-based flowchart infographic showing <span class="ph">[PROCESS OR JOURNEY]</span> as a route across an illustrated map of <span class="ph">[PLACE]</span>. Connect <span class="ph">[NUMBER]</span> numbered stops with a dotted path; give each a landmark icon, a step title and one line of explanation. Mark the start and finish and add a small legend. Use <span class="ph">[COLOUR PALETTE]</span>.</div>
+<button class="copy" type="button" data-copy="info-30-p">Copy prompt</button>
+</article>
+<article class="card" id="info-31" data-search="31 illustrated landmark map cities, cultural units, welcome guides">
+<div class="card-head"><span class="num">31</span><h3>Illustrated Landmark Map</h3></div>
+<p class="best"><b>Best for:</b> cities, cultural units, welcome guides</p>
+<svg class="pv" role="img" aria-label="Sample preview: Illustrated Landmark Map" viewBox="0 0 320 100">
+<text class="t1" x="14" y="16">Discover Dubai</text>
+<circle class="w" cx="298" cy="11" r="7" style="stroke:var(--a);stroke-width:1"></circle><path class="a" d="M298 5l2 6-2 6-2-6z"></path><text class="t3 c ta" x="288" y="13" style="font-weight:700">N</text>
+<rect class="w" x="10" y="22" width="300" height="74" rx="6"></rect>
+<path d="M10 28a6 6 0 0 1 6-6h288a6 6 0 0 1 6 6v6c-20 4-40-4-60 0s-40-4-60 0-40-4-60 0-40-4-60 0-40-4-60 0z" style="fill:var(--a);fill-opacity:.25"></path>
+<path class="a" d="M40 78V42C54 48 58 64 56 78Z"></path><path class="sk" d="M40 42V38"></path>
+<path class="a" d="M100 78L104 60L108 32L112 60L116 78Z"></path><path class="sk" d="M108 32V26"></path>
+<ellipse cx="164" cy="62" rx="14" ry="11" style="fill:none;stroke:var(--a);stroke-width:6"></ellipse><rect class="m" x="150" y="74" width="28" height="4" rx="1"></rect>
+<rect x="210" y="44" width="20" height="33" style="fill:none;stroke:#C9A23F;stroke-width:4"></rect>
+<path class="a" d="M258 70h28l-4 6h-20z"></path><path class="sk" d="M262 70v-6h20v6"></path><path d="M252 80c6-3 10 3 16 0s10 3 16 0 10 3 16 0" style="fill:none;stroke:var(--a);stroke-width:1.5;stroke-linecap:round"></path>
+<rect class="a" x="22" y="83" width="48" height="10" rx="2"></rect><text class="t3 tw c" x="46" y="90" style="font-weight:700">Burj Al Arab</text>
+<rect class="a" x="85" y="83" width="46" height="10" rx="2"></rect><text class="t3 tw c" x="108" y="90" style="font-weight:700">Burj Khalifa</text>
+<rect class="a" x="134" y="83" width="62" height="10" rx="2"></rect><text class="t3 tw c" x="165" y="90" style="font-weight:700">Museum of the Future</text>
+<rect class="a" x="199" y="83" width="42" height="10" rx="2"></rect><text class="t3 tw c" x="220" y="90" style="font-weight:700">Dubai Frame</text>
+<rect class="a" x="250" y="83" width="42" height="10" rx="2"></rect><text class="t3 tw c" x="271" y="90" style="font-weight:700">Dubai Creek</text>
+</svg>
+<div class="prompt" id="info-31-p">Design an illustrated landmark map infographic of <span class="ph">[CITY, COUNTRY OR CAMPUS]</span>. Draw <span class="ph">[NUMBER]</span> key landmarks as charming 3D-style illustrations: <span class="ph">[LANDMARKS]</span>. Label each landmark with its name and one short fact on a ribbon banner. Add a compass rose, a decorative title panel and a soft <span class="ph">[COLOUR PALETTE]</span> palette.</div>
+<button class="copy" type="button" data-copy="info-31-p">Copy prompt</button>
+</article>
+<article class="card" id="info-32" data-search="32 miniature 3d diorama places, ecosystems, campuses, history scenes">
+<div class="card-head"><span class="num">32</span><h3>Miniature 3D Diorama</h3></div>
+<p class="best"><b>Best for:</b> places, ecosystems, campuses, history scenes</p>
+<svg class="pv" role="img" aria-label="Sample preview: Miniature 3D Diorama" viewBox="0 0 320 100">
+<text class="t1" x="14" y="16">Our Campus in Miniature</text>
+<path d="M40 58L110 82V90L40 66Z" style="fill:var(--a);fill-opacity:.55"></path><path class="a" d="M110 82L180 58V66L110 90Z"></path>
+<path d="M110 34L180 58L110 82L40 58Z" style="fill:#CFE6C9"></path>
+<path class="m" d="M82 59L96 64L96 46L82 41Z"></path><path class="a" d="M96 64L110 59L110 41L96 46Z"></path><path class="w" d="M96 46L110 41L96 36L82 41Z"></path>
+<path class="m" d="M122 55L136 60L136 48L122 43Z"></path><path class="a" d="M136 60L150 55L150 43L136 48Z"></path><path class="w" d="M136 48L150 43L136 38L122 43Z"></path>
+<circle cx="66" cy="58" r="5" style="fill:#4E9A54"></circle><circle cx="74" cy="64" r="4" style="fill:#4E9A54"></circle><circle cx="154" cy="66" r="4" style="fill:#4E9A54"></circle>
+<circle class="k" cx="116" cy="70" r="1.5"></circle><circle class="k" cx="122" cy="72" r="1.5"></circle><circle class="k" cx="100" cy="74" r="1.5"></circle>
+<path class="sk" d="M101 28H200M141 38H200" style="stroke-width:.8;stroke-dasharray:2 2"></path>
+<circle class="a" cx="96" cy="28" r="5"></circle><text class="t3 tw c" x="96" y="30.5" style="font-weight:700">1</text>
+<circle class="a" cx="136" cy="38" r="5"></circle><text class="t3 tw c" x="136" y="40.5" style="font-weight:700">2</text>
+<circle class="a" cx="66" cy="49" r="5"></circle><text class="t3 tw c" x="66" y="51.5" style="font-weight:700">3</text>
+<rect class="w" x="200" y="22" width="106" height="72" rx="8"></rect>
+<text class="t2" x="210" y="36">1  Library</text><text class="t3" x="221" y="45">Quiet study and reading</text>
+<text class="t2" x="210" y="59">2  Sports Hall</text><text class="t3" x="221" y="68">Indoor courts and fitness</text>
+<text class="t2" x="210" y="82">3  Garden</text><text class="t3" x="221" y="91">Student-grown herbs</text>
+</svg>
+<div class="prompt" id="info-32-p">Design a miniature 3D diorama infographic of <span class="ph">[PLACE OR SCENE]</span> on a floating square platform. Include tiny detailed buildings, people, trees and objects, with <span class="ph">[NUMBER]</span> labelled callouts naming key features and a one-line fact for each. Tilt-shift lighting, soft shadows, <span class="ph">[COLOUR PALETTE]</span> and a clean white background.</div>
+<button class="copy" type="button" data-copy="info-32-p">Copy prompt</button>
+</article>
+<article class="card" id="info-33" data-search="33 labelled anatomy diagram science, vocabulary labelling, product parts">
+<div class="card-head"><span class="num">33</span><h3>Labelled Anatomy Diagram</h3></div>
+<p class="best"><b>Best for:</b> science, vocabulary labelling, product parts</p>
+<svg class="pv" role="img" aria-label="Sample preview: Labelled Anatomy Diagram" viewBox="0 0 320 100">
+<text class="t1" x="14" y="16">Parts of a Plant Cell</text>
+<rect x="110" y="24" width="100" height="70" rx="10" style="fill:#CFE6C9;stroke:#3F7F46;stroke-width:3"></rect>
+<rect class="w" x="116" y="30" width="88" height="58" rx="7" style="stroke:#3F7F46;stroke-width:1"></rect>
+<rect x="138" y="40" width="46" height="38" rx="10" style="fill:var(--a);fill-opacity:.22"></rect>
+<circle class="a" cx="127" cy="48" r="8"></circle><circle cx="127" cy="48" r="3" style="fill:#fff;fill-opacity:.5"></circle>
+<ellipse cx="196" cy="40" rx="6" ry="3.5" style="fill:#4E9A54"></ellipse><ellipse cx="194" cy="78" rx="6" ry="3.5" style="fill:#4E9A54"></ellipse><ellipse cx="125" cy="78" rx="6" ry="3.5" style="fill:#4E9A54"></ellipse>
+<path class="sk" d="M54 32H110M50 50H119M68 74H116M202 40H226M197 61H226M182 76L198 80H226" style="stroke-width:.8"></path>
+<text class="t2" x="14" y="35">Cell wall</text><text class="t2" x="14" y="53">Nucleus</text><text class="t2" x="14" y="77">Cell membrane</text>
+<text class="t2" x="230" y="43">Chloroplast</text><text class="t2" x="230" y="64">Cytoplasm</text><text class="t2" x="230" y="83">Vacuole</text>
+</svg>
+<div class="prompt" id="info-33-p">Design a labelled anatomy diagram infographic of <span class="ph">[OBJECT OR SYSTEM]</span>. Place a large central illustration of <span class="ph">[OBJECT]</span> with <span class="ph">[NUMBER]</span> callout lines to its parts, each labelled with a name and a one-line function. Use <span class="ph">[STYLE, e.g. clean technical illustration]</span>, <span class="ph">[COLOUR PALETTE]</span> and a white background.</div>
+<button class="copy" type="button" data-copy="info-33-p">Copy prompt</button>
+</article>
+<article class="card" id="info-34" data-search="34 cutaway cross-section buildings, the body, earth layers, machines">
+<div class="card-head"><span class="num">34</span><h3>Cutaway Cross-Section</h3></div>
+<p class="best"><b>Best for:</b> buildings, the body, earth layers, machines</p>
+<svg class="pv" role="img" aria-label="Sample preview: Cutaway Cross-Section" viewBox="0 0 320 100">
+<text class="t1" x="14" y="16">Inside a Sustainable School</text>
+<path d="M24 40L100 20L176 40Z" style="fill:var(--a);fill-opacity:.2;stroke:var(--ink);stroke-width:1.2;stroke-linejoin:round"></path>
+<path class="a" d="M108 25L142 34L139 38L105 29Z"></path><path class="a" d="M122 30L150 37.5" style="stroke:#fff;stroke-width:.6"></path>
+<rect class="w" x="30" y="40" width="140" height="36" style="stroke:var(--ink);stroke-width:1.2"></rect>
+<path class="sk" d="M30 58H170M100 40V76"></path>
+<rect x="30" y="76" width="140" height="18" style="fill:var(--ink);fill-opacity:.08;stroke:var(--ink);stroke-width:1.2"></rect>
+<rect class="m" x="40" y="80" width="60" height="10" rx="3"></rect>
+<path d="M14 76H186" style="stroke:#8B6A45;stroke-width:2"></path>
+<rect class="m" x="50" y="49" width="10" height="5" rx="1"></rect><rect class="m" x="66" y="49" width="10" height="5" rx="1"></rect><rect class="m" x="82" y="49" width="10" height="5" rx="1"></rect>
+<path class="sk" d="M140 44V56M148 44V56M156 44V56M164 44V56" style="stroke:var(--a);stroke-width:2"></path>
+<circle cx="60" cy="68" r="4" style="fill:none;stroke:var(--a);stroke-width:1.5"></circle><path class="sk" d="M70 72h16" style="stroke:var(--a)"></path>
+<circle class="k" cx="124" cy="30" r="5"></circle><text class="t3 tw c" x="124" y="32.5" style="font-weight:700">1</text>
+<circle class="k" cx="40" cy="46" r="5"></circle><text class="t3 tw c" x="40" y="48.5" style="font-weight:700">2</text>
+<circle class="k" cx="110" cy="46" r="5"></circle><text class="t3 tw c" x="110" y="48.5" style="font-weight:700">3</text>
+<circle class="k" cx="40" cy="64" r="5"></circle><text class="t3 tw c" x="40" y="66.5" style="font-weight:700">4</text>
+<circle class="k" cx="110" cy="85" r="5"></circle><text class="t3 tw c" x="110" y="87.5" style="font-weight:700">5</text>
+<rect class="w" x="196" y="24" width="110" height="70" rx="8"></rect>
+<text class="t2 ta" x="206" y="36">Key</text>
+<text class="t3" x="206" y="48" style="fill:var(--ink)">1  Solar roof panels</text><text class="t3" x="206" y="58" style="fill:var(--ink)">2  Classroom</text><text class="t3" x="206" y="68" style="fill:var(--ink)">3  Library</text><text class="t3" x="206" y="78" style="fill:var(--ink)">4  Science lab</text><text class="t3" x="206" y="88" style="fill:var(--ink)">5  Rainwater tank</text>
+</svg>
+<div class="prompt" id="info-34-p">Design a cutaway cross-section infographic of <span class="ph">[BUILDING, PLACE OR OBJECT]</span>, sliced open to reveal what is inside. Label <span class="ph">[NUMBER]</span> rooms, layers or components with numbered callouts and a short description for each. Use a detailed 3D illustration style, <span class="ph">[COLOUR PALETTE]</span> and a key panel listing the numbered parts.</div>
+<button class="copy" type="button" data-copy="info-34-p">Copy prompt</button>
+</article>
+</div>
+</section><section class="sec" id="info-s7" style="--a:#8A6A1F;--t:#F6EFDC" aria-labelledby="info-s7-h">
+<div class="sec-head">
+<div><p class="kicker">Section 7</p><h2 id="info-s7-h">3D and Luxury</h2></div>
+<p class="range">35 to 40</p>
+</div>
+<div class="grid">
+<article class="card" id="info-35" data-search="35 isometric 3d systems, buildings, tech processes">
+<div class="card-head"><span class="num">35</span><h3>Isometric 3D</h3></div>
+<p class="best"><b>Best for:</b> systems, buildings, tech processes</p>
+<svg class="pv" role="img" aria-label="Sample preview: Isometric 3D" viewBox="0 0 320 100">
+<text class="t1" x="14" y="16">How a Smart City Works</text>
+<path d="M78 64L132 52M168 52L222 64" style="fill:none;stroke:var(--a);stroke-width:1.5;stroke-dasharray:3 3"></path>
+<path class="m" d="M42 75L60 84L60 62L42 53Z"></path><path class="a" d="M60 84L78 75L78 53L60 62Z"></path><path class="w" d="M60 62L78 53L60 44L42 53Z"></path>
+<path d="M52 53L62 48L70 52L60 57Z" style="fill:#2F4A7A"></path>
+<path class="m" d="M132 65L150 74L150 40L132 31Z"></path><path class="a" d="M150 74L168 65L168 31L150 40Z"></path><path class="w" d="M150 40L168 31L150 22L132 31Z"></path>
+<path d="M154 46L164 41M154 54L164 49M154 62L164 57" style="stroke:#F6D776;stroke-width:2;stroke-linecap:round"></path>
+<path class="m" d="M222 75L240 84L240 66L222 57Z"></path><path class="a" d="M240 84L258 75L258 57L240 66Z"></path><path class="w" d="M240 66L258 57L240 48L222 57Z"></path>
+<path d="M244 72L248 70V75L244 77Z" style="fill:#F6D776"></path><path d="M251 69L255 67V72L251 74Z" style="fill:#F6D776"></path>
+<text class="t2 c" x="60" y="96">Solar Farm</text><text class="t2 c" x="150" y="88">Data Centre</text><text class="t2 c" x="240" y="96">Homes</text>
+<text class="t3 c" x="104" y="52">clean energy</text><text class="t3 c" x="196" y="52">smart control</text>
+</svg>
+<div class="prompt" id="info-35-p">Design an isometric 3D infographic illustrating <span class="ph">[SYSTEM, PLACE OR PROCESS]</span>. Show <span class="ph">[NUMBER]</span> connected isometric scenes or blocks, each labelled with a heading and a one-line explanation. Use <span class="ph">[COLOUR PALETTE]</span>, soft lighting, crisp edges and a light background so the 3D elements stand out.</div>
+<button class="copy" type="button" data-copy="info-35-p">Copy prompt</button>
+</article>
+<article class="card" id="info-36" data-search="36 3d clay render friendly explainers, younger learners">
+<div class="card-head"><span class="num">36</span><h3>3D Clay Render</h3></div>
+<p class="best"><b>Best for:</b> friendly explainers, younger learners</p>
+<svg class="pv" role="img" aria-label="Sample preview: 3D Clay Render" viewBox="0 0 320 100">
+<rect x="0" y="0" width="320" height="100" rx="8" style="fill:#FBE9E4"></rect>
+<text class="t1" x="14" y="16">Build a Balanced Plate</text>
+<ellipse cx="100" cy="70" rx="68" ry="24" style="fill:var(--ink);fill-opacity:.1"></ellipse>
+<ellipse cx="100" cy="62" rx="66" ry="26" style="fill:#fff"></ellipse><ellipse cx="100" cy="62" rx="54" ry="19" style="fill:#F4F1EC"></ellipse>
+<ellipse cx="80" cy="61" rx="28" ry="15" style="fill:#7BC47F"></ellipse><ellipse cx="72" cy="55" rx="8" ry="4" style="fill:#fff;fill-opacity:.45"></ellipse>
+<ellipse cx="126" cy="54" rx="18" ry="9" style="fill:#E8A07A"></ellipse><ellipse cx="121" cy="51" rx="5" ry="2.5" style="fill:#fff;fill-opacity:.45"></ellipse>
+<ellipse cx="126" cy="72" rx="18" ry="8" style="fill:#F2D06B"></ellipse><ellipse cx="121" cy="69" rx="5" ry="2.5" style="fill:#fff;fill-opacity:.45"></ellipse>
+<circle cx="196" cy="40" r="6" style="fill:#7BC47F"></circle><text class="t2" x="208" y="38">Half the plate</text><text class="t3" x="208" y="47">fruit and vegetables</text>
+<circle cx="196" cy="62" r="6" style="fill:#E8A07A"></circle><text class="t2" x="208" y="60">A quarter</text><text class="t3" x="208" y="69">protein</text>
+<circle cx="196" cy="84" r="6" style="fill:#F2D06B"></circle><text class="t2" x="208" y="82">A quarter</text><text class="t3" x="208" y="91">whole grains</text>
+</svg>
+<div class="prompt" id="info-36-p">Design a 3D clay render infographic about <span class="ph">[TOPIC]</span>. Show <span class="ph">[NUMBER]</span> soft, rounded claymorphism objects representing <span class="ph">[KEY IDEAS]</span>, with matte textures, gentle studio lighting and soft shadows on a pastel <span class="ph">[BACKGROUND COLOUR]</span> background. Place a short label and a one-line caption beside each object. Playful, tactile and modern.</div>
+<button class="copy" type="button" data-copy="info-36-p">Copy prompt</button>
+</article>
+<article class="card" id="info-37" data-search="37 frosted glass 3d tech showcases, ai tools, keynote slides">
+<div class="card-head"><span class="num">37</span><h3>Frosted Glass 3D</h3></div>
+<p class="best"><b>Best for:</b> tech showcases, AI tools, keynote slides</p>
+<svg class="pv" role="img" aria-label="Sample preview: Frosted Glass 3D" viewBox="0 0 320 100">
+<rect x="0" y="0" width="320" height="100" rx="8" style="fill:#EDEBFA"></rect>
+<circle cx="60" cy="44" r="28" style="fill:#B9A6F5;filter:blur(6px)"></circle><circle cx="172" cy="80" r="30" style="fill:#8FD3E0;filter:blur(6px)"></circle><circle cx="272" cy="36" r="24" style="fill:#F2C27B;filter:blur(6px)"></circle>
+<text class="t1" x="14" y="16">AI Tools in Our Classroom</text>
+<rect x="14" y="26" width="92" height="66" rx="10" style="fill:#fff;fill-opacity:.55;stroke:#fff;stroke-width:1.2"></rect>
+<rect x="114" y="26" width="92" height="66" rx="10" style="fill:#fff;fill-opacity:.55;stroke:#fff;stroke-width:1.2"></rect>
+<rect x="214" y="26" width="92" height="66" rx="10" style="fill:#fff;fill-opacity:.55;stroke:#fff;stroke-width:1.2"></rect>
+<circle cx="32" cy="46" r="9" style="fill:#7B5FE0"></circle><circle cx="132" cy="46" r="9" style="fill:#2A9DB5"></circle><circle cx="232" cy="46" r="9" style="fill:#C98A12"></circle>
+<path class="sw" d="M28 46h8M32 42v8M128 44h8M128 48h6M228 46l3 3 5-6" style="stroke-width:1.5"></path>
+<text class="t2" x="24" y="70">Brainstorm</text><text class="t3" x="24" y="80" style="fill:var(--ink)">Ideas, not answers</text>
+<text class="t2" x="124" y="70">Give feedback</text><text class="t3" x="124" y="80" style="fill:var(--ink)">On drafts in progress</text>
+<text class="t2" x="224" y="70">Translate</text><text class="t3" x="224" y="80" style="fill:var(--ink)">Support EAL learners</text>
+</svg>
+<div class="prompt" id="info-37-p">Create a frosted glass 3D infographic about <span class="ph">[TOPIC]</span>. Use translucent glassmorphism panels floating over soft blurred shapes in <span class="ph">[COLOUR PALETTE]</span>, with subtle reflections, thin white borders and glowing 3D icons. Present <span class="ph">[NUMBER]</span> key points on separate glass cards with short headings. Sleek, premium and futuristic.</div>
+<button class="copy" type="button" data-copy="info-37-p">Copy prompt</button>
+</article>
+<article class="card" id="info-38" data-search="38 exploded view object science, design tech, how things are made">
+<div class="card-head"><span class="num">38</span><h3>Exploded View Object</h3></div>
+<p class="best"><b>Best for:</b> science, design tech, how things are made</p>
+<svg class="pv" role="img" aria-label="Sample preview: Exploded View Object" viewBox="0 0 320 100">
+<text class="t1" x="14" y="16">Inside a Smartphone</text>
+<path d="M50 32V86M130 32V86" style="stroke:var(--ink);stroke-opacity:.35;stroke-width:.8;stroke-dasharray:2 2"></path>
+<path d="M50 84L90 74L130 84L90 94Z" style="fill:var(--ink);fill-opacity:.8"></path>
+<path d="M50 71L90 61L130 71L90 81Z" style="fill:#4E9A54"></path><path d="M76 70h8M92 68h10M84 74h12" style="stroke:#F6D776;stroke-width:1;stroke-linecap:round"></path>
+<path class="a" d="M50 58L90 48L130 58L90 68Z"></path>
+<path d="M50 45L90 35L130 45L90 55Z" style="fill:#2F4A7A"></path>
+<path d="M50 32L90 22L130 32L90 42Z" style="fill:#fff;fill-opacity:.75;stroke:#9FB3C8;stroke-width:1"></path>
+<path class="sk" d="M130 32H170M130 45H170M130 58H170M130 71H170M130 84H170" style="stroke-width:.8"></path>
+<text class="t2" x="174" y="34">Glass screen</text><text class="t3" x="232" y="34">protects, senses touch</text>
+<text class="t2" x="174" y="47">Display</text><text class="t3" x="232" y="47">shows the image</text>
+<text class="t2" x="174" y="60">Battery</text><text class="t3" x="232" y="60">stores energy</text>
+<text class="t2" x="174" y="73">Circuit board</text><text class="t3" x="232" y="73">processes data</text>
+<text class="t2" x="174" y="86">Back case</text><text class="t3" x="232" y="86">holds it together</text>
+</svg>
+<div class="prompt" id="info-38-p">Create an exploded view infographic of <span class="ph">[OBJECT, e.g. a smartphone or a flower]</span>. Show the object separated into <span class="ph">[NUMBER]</span> floating layers or parts in 3D, aligned along a central axis with dashed guide lines. Label each part with its name and a one-line function using thin leader lines. Clean technical style, <span class="ph">[COLOUR PALETTE]</span>, light background.</div>
+<button class="copy" type="button" data-copy="info-38-p">Copy prompt</button>
+</article>
+<article class="card" id="info-39" data-search="39 black and gold luxury awards, invitations, premium event programmes">
+<div class="card-head"><span class="num">39</span><h3>Black and Gold Luxury</h3></div>
+<p class="best"><b>Best for:</b> awards, invitations, premium event programmes</p>
+<svg class="pv" role="img" aria-label="Sample preview: Black and Gold Luxury" viewBox="0 0 320 100">
+<rect x="0" y="0" width="320" height="100" rx="8" style="fill:#121212"></rect>
+<rect x="8" y="8" width="304" height="84" rx="3" style="fill:none;stroke:#D9B75E;stroke-width:1"></rect><rect x="12" y="12" width="296" height="76" rx="2" style="fill:none;stroke:#D9B75E;stroke-opacity:.4;stroke-width:.6"></rect>
+<text class="t3 c" x="160" y="26" style="fill:#D9B75E;letter-spacing:2px;font-weight:600">CELEBRATING STUDENT ACHIEVEMENT</text>
+<text class="sf c" x="160" y="45" style="font-size:17px;fill:#E8CF8A">Excellence Awards</text>
+<path d="M120 52H200" style="stroke:#D9B75E;stroke-width:.8"></path><path d="M160 49l3 3-3 3-3-3z" style="fill:#D9B75E"></path>
+<rect x="40" y="60" width="72" height="22" rx="2" style="fill:none;stroke:#D9B75E;stroke-width:.8"></rect><text class="sf c" x="76" y="74" style="font-size:9px;fill:#E8CF8A">Academic</text>
+<rect x="124" y="60" width="72" height="22" rx="2" style="fill:none;stroke:#D9B75E;stroke-width:.8"></rect><text class="sf c" x="160" y="74" style="font-size:9px;fill:#E8CF8A">Creativity</text>
+<rect x="208" y="60" width="72" height="22" rx="2" style="fill:none;stroke:#D9B75E;stroke-width:.8"></rect><text class="sf c" x="244" y="74" style="font-size:9px;fill:#E8CF8A">Community</text>
+</svg>
+<div class="prompt" id="info-39-p">Create a luxury black and gold infographic about <span class="ph">[TOPIC]</span>. Use a matte black background, metallic gold foil accents, thin gold dividing lines, an elegant serif headline and refined sans serif body text. Present <span class="ph">[NUMBER]</span> key points in framed panels with minimal gold line icons. Premium, high-end feel for <span class="ph">[AUDIENCE]</span>.</div>
+<button class="copy" type="button" data-copy="info-39-p">Copy prompt</button>
+</article>
+<article class="card" id="info-40" data-search="40 neon futuristic ai, technology, coding, innovation topics">
+<div class="card-head"><span class="num">40</span><h3>Neon Futuristic</h3></div>
+<p class="best"><b>Best for:</b> AI, technology, coding, innovation topics</p>
+<svg class="pv" role="img" aria-label="Sample preview: Neon Futuristic" viewBox="0 0 320 100">
+<rect x="0" y="0" width="320" height="100" rx="8" style="fill:#0E1430"></rect>
+<path d="M0 25H320M0 50H320M0 75H320M40 0V100M80 0V100M120 0V100M160 0V100M200 0V100M240 0V100M280 0V100" style="stroke:#4FD8EA;stroke-opacity:.08;stroke-width:1"></path>
+<text class="t1" x="14" y="18" style="fill:#8BEAF5">AI LITERACY: THREE HABITS</text>
+<rect x="14" y="30" width="92" height="58" rx="8" style="fill:none;stroke:#FF6FAE;stroke-opacity:.35;stroke-width:5"></rect><rect x="14" y="30" width="92" height="58" rx="8" style="fill:#FF6FAE;fill-opacity:.06;stroke:#FF9CC8;stroke-width:1.2"></rect>
+<rect x="114" y="30" width="92" height="58" rx="8" style="fill:none;stroke:#4FD8EA;stroke-opacity:.35;stroke-width:5"></rect><rect x="114" y="30" width="92" height="58" rx="8" style="fill:#4FD8EA;fill-opacity:.06;stroke:#8BEAF5;stroke-width:1.2"></rect>
+<rect x="214" y="30" width="92" height="58" rx="8" style="fill:none;stroke:#B48CFF;stroke-opacity:.35;stroke-width:5"></rect><rect x="214" y="30" width="92" height="58" rx="8" style="fill:#B48CFF;fill-opacity:.06;stroke:#CDB3FF;stroke-width:1.2"></rect>
+<text class="tb" x="24" y="54" style="fill:#FF9CC8;font-size:14px">01</text><text class="t2" x="24" y="68" style="fill:#fff">Prompt</text><text class="t3" x="24" y="78" style="fill:#C9D3F5">Ask clear questions</text>
+<text class="tb" x="124" y="54" style="fill:#8BEAF5;font-size:14px">02</text><text class="t2" x="124" y="68" style="fill:#fff">Verify</text><text class="t3" x="124" y="78" style="fill:#C9D3F5">Check facts and sources</text>
+<text class="tb" x="224" y="54" style="fill:#CDB3FF;font-size:14px">03</text><text class="t2" x="224" y="68" style="fill:#fff">Reflect</text><text class="t3" x="224" y="78" style="fill:#C9D3F5">Own your final ideas</text>
+</svg>
+<div class="prompt" id="info-40-p">Create a futuristic dark-mode infographic about <span class="ph">[TOPIC, e.g. AI in education]</span>. Use a deep navy or black background, glowing neon accents in <span class="ph">[NEON COLOURS]</span>, thin line icons, subtle grid lines and holographic panels. Present <span class="ph">[NUMBER]</span> key points as glowing cards with short labels.</div>
+<button class="copy" type="button" data-copy="info-40-p">Copy prompt</button>
+</article>
+</div>
+</section><section class="sec" id="info-s8" style="--a:#B8326A;--t:#F9E6EE" aria-labelledby="info-s8-h">
+<div class="sec-head">
+<div><p class="kicker">Section 8</p><h2 id="info-s8-h">Aesthetic Styles</h2></div>
+<p class="range">41 to 44</p>
+</div>
+<div class="grid">
+<article class="card" id="info-41" data-search="41 flat minimalist clean professional handouts, slides">
+<div class="card-head"><span class="num">41</span><h3>Flat Minimalist</h3></div>
+<p class="best"><b>Best for:</b> clean professional handouts, slides</p>
+<svg class="pv" role="img" aria-label="Sample preview: Flat Minimalist" viewBox="0 0 320 100">
+<rect x="0" y="0" width="320" height="100" rx="8" style="fill:#fff"></rect>
+<text class="t1" x="14" y="18">4 Ways to Reduce Waste</text>
+<circle class="a" cx="50" cy="48" r="16"></circle><circle class="m" cx="123" cy="48" r="16"></circle><circle class="a" cx="196" cy="48" r="16"></circle><circle class="m" cx="270" cy="48" r="16"></circle>
+<rect class="w" x="43" y="44" width="14" height="9" rx="1"></rect><path class="sw" d="M43 44l7-5 7 5" style="stroke-width:1.5"></path>
+<path class="sw" d="M115 48a8 8 0 1 1 3 6M115 48v-4M115 48h4" style="stroke-width:1.8"></path>
+<path class="w" d="M196 38l8 14h-16z"></path>
+<circle class="w" cx="270" cy="48" r="6"></circle><circle class="m" cx="270" cy="48" r="2.5"></circle>
+<text class="t2 c" x="50" y="78">Reduce</text><text class="t2 c" x="123" y="78">Reuse</text><text class="t2 c" x="196" y="78">Recycle</text><text class="t2 c" x="270" y="78">Rethink</text>
+<text class="t3 c" x="50" y="88">Buy less</text><text class="t3 c" x="123" y="88">Use it again</text><text class="t3 c" x="196" y="88">Sort your bins</text><text class="t3 c" x="270" y="88">Choose better</text>
+</svg>
+<div class="prompt" id="info-41-p">Create a flat minimalist infographic about <span class="ph">[TOPIC]</span>. Use simple geometric shapes, a maximum of <span class="ph">[NUMBER]</span> colours from <span class="ph">[COLOUR PALETTE]</span>, no gradients or shadows, thin line icons and lots of white space. Organise the content as <span class="ph">[LAYOUT, e.g. 4 icon blocks]</span> with short headings and very concise text.</div>
+<button class="copy" type="button" data-copy="info-41-p">Copy prompt</button>
+</article>
+<article class="card" id="info-42" data-search="42 retro vintage poster history, events, eye-catching displays">
+<div class="card-head"><span class="num">42</span><h3>Retro Vintage Poster</h3></div>
+<p class="best"><b>Best for:</b> history, events, eye-catching displays</p>
+<svg class="pv" role="img" aria-label="Sample preview: Retro Vintage Poster" viewBox="0 0 320 100">
+<defs><pattern id="dots42" width="6" height="6" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1.2" style="fill:#C8643C;fill-opacity:.3"></circle></pattern></defs>
+<rect x="0" y="0" width="320" height="100" rx="8" style="fill:#F3E2C2"></rect>
+<circle cx="70" cy="104" r="62" style="fill:#E8A44A;fill-opacity:.45"></circle><rect x="0" y="0" width="320" height="100" rx="8" style="fill:url(#dots42)"></rect>
+<text class="bb" x="14" y="38" style="font-size:26px;fill:#B8432E;letter-spacing:1px">THE SPACE</text><text class="bb" x="14" y="62" style="font-size:26px;fill:#2E6E6A;letter-spacing:1px">RACE</text>
+<path d="M118 84l8-34 8 34z" style="fill:#2E6E6A"></path><circle cx="126" cy="62" r="3" style="fill:#F3E2C2"></circle><path d="M118 84l-5 6h10zM134 84l5 6h-10z" style="fill:#B8432E"></path>
+<circle cx="190" cy="52" r="20" style="fill:#2E6E6A"></circle><circle cx="240" cy="52" r="20" style="fill:#B8432E"></circle><circle cx="290" cy="52" r="20" style="fill:#2E6E6A"></circle>
+<text class="bb c" x="190" y="58" style="font-size:16px;fill:#F3E2C2">1957</text><text class="bb c" x="240" y="58" style="font-size:16px;fill:#F3E2C2">1961</text><text class="bb c" x="290" y="58" style="font-size:16px;fill:#F3E2C2">1969</text>
+<text class="t3 c" x="190" y="84" style="fill:#3B2A1A;font-weight:700">Sputnik 1</text><text class="t3 c" x="240" y="84" style="fill:#3B2A1A;font-weight:700">First human</text><text class="t3 c" x="290" y="84" style="fill:#3B2A1A;font-weight:700">Moon landing</text>
+<text class="t3 c" x="240" y="92" style="fill:#3B2A1A">in space</text>
+</svg>
+<div class="prompt" id="info-42-p">Design a retro vintage poster-style infographic about <span class="ph">[TOPIC]</span>. Use a <span class="ph">[DECADE, e.g. 1960s]</span> aesthetic with textured paper, halftone shading, bold retro typography and a muted palette of <span class="ph">[COLOURS]</span>. Present <span class="ph">[NUMBER]</span> facts in decorative badge or banner shapes around a central illustration of <span class="ph">[IMAGE]</span>.</div>
+<button class="copy" type="button" data-copy="info-42-p">Copy prompt</button>
+</article>
+<article class="card" id="info-43" data-search="43 watercolour organic wellbeing, nature, family newsletters">
+<div class="card-head"><span class="num">43</span><h3>Watercolour Organic</h3></div>
+<p class="best"><b>Best for:</b> wellbeing, nature, family newsletters</p>
+<svg class="pv" role="img" aria-label="Sample preview: Watercolour Organic" viewBox="0 0 320 100">
+<rect x="0" y="0" width="320" height="100" rx="8" style="fill:#FFFBF5"></rect>
+<ellipse cx="50" cy="58" rx="32" ry="24" style="fill:#F2A7C3;fill-opacity:.55;filter:blur(3px)"></ellipse>
+<ellipse cx="125" cy="60" rx="32" ry="24" style="fill:#F6C79A;fill-opacity:.6;filter:blur(3px)"></ellipse>
+<ellipse cx="200" cy="58" rx="32" ry="24" style="fill:#A9CDA0;fill-opacity:.6;filter:blur(3px)"></ellipse>
+<ellipse cx="275" cy="60" rx="32" ry="24" style="fill:#C3B4EA;fill-opacity:.6;filter:blur(3px)"></ellipse>
+<text class="sf" x="14" y="20" style="font-size:13px;font-style:italic;fill:var(--ink)">Mindful Moments</text>
+<path d="M146 14c8-6 16-4 18 2-8 4-14 3-18-2z" style="fill:#7FA878"></path><path d="M146 14c8 0 14 0 18 2" style="fill:none;stroke:#5E8A57;stroke-width:.6"></path>
+<text class="sf c" x="50" y="58" style="font-size:11px;fill:var(--ink)">Breathe</text><text class="t3 c" x="50" y="68" style="fill:var(--ink)">Four slow breaths</text>
+<text class="sf c" x="125" y="58" style="font-size:11px;fill:var(--ink)">Notice</text><text class="t3 c" x="125" y="68" style="fill:var(--ink)">Name five things</text>
+<text class="sf c" x="200" y="58" style="font-size:11px;fill:var(--ink)">Rest</text><text class="t3 c" x="200" y="68" style="fill:var(--ink)">Screens off early</text>
+<text class="sf c" x="275" y="58" style="font-size:11px;fill:var(--ink)">Connect</text><text class="t3 c" x="275" y="68" style="fill:var(--ink)">Talk to a friend</text>
+</svg>
+<div class="prompt" id="info-43-p">Design a soft watercolour-style infographic about <span class="ph">[TOPIC]</span>. Use loose watercolour washes in <span class="ph">[COLOUR PALETTE]</span>, hand-painted botanical or organic shapes as section frames and elegant serif headings. Present <span class="ph">[NUMBER]</span> sections with short text. Calm, warm and inviting mood for <span class="ph">[AUDIENCE]</span>.</div>
+<button class="copy" type="button" data-copy="info-43-p">Copy prompt</button>
+</article>
+<article class="card" id="info-44" data-search="44 swiss editorial grid reports, conference handouts, polished print">
+<div class="card-head"><span class="num">44</span><h3>Swiss Editorial Grid</h3></div>
+<p class="best"><b>Best for:</b> reports, conference handouts, polished print</p>
+<svg class="pv" role="img" aria-label="Sample preview: Swiss Editorial Grid" viewBox="0 0 320 100">
+<rect x="0" y="0" width="320" height="100" rx="8" style="fill:#fff"></rect>
+<path class="a" d="M8 0H100V100H8A8 8 0 0 1 0 92V8A8 8 0 0 1 8 0Z"></path>
+<text class="tb tw" x="12" y="34" style="font-size:17px">DESIGN</text><text class="tb tw" x="12" y="54" style="font-size:17px">THINKING</text><text class="t3 tw" x="12" y="86">Five stages, one</text><text class="t3 tw" x="12" y="94">human-centred method</text>
+<path d="M112 20H308M112 78H308M151 20V90M190 20V90M229 20V90M268 20V90" style="stroke:var(--ink);stroke-width:.6"></path>
+<text class="tb" x="114" y="46" style="font-size:16px;fill:var(--ink)">01</text><text class="tb" x="153" y="46" style="font-size:16px;fill:var(--ink)">02</text><text class="tb" x="192" y="46" style="font-size:16px;fill:var(--ink)">03</text><text class="tb" x="231" y="46" style="font-size:16px;fill:var(--ink)">04</text><text class="tb ta" x="270" y="46" style="font-size:16px">05</text>
+<text class="t2" x="114" y="70">Empathise</text><text class="t2" x="153" y="70">Define</text><text class="t2" x="192" y="70">Ideate</text><text class="t2" x="231" y="70">Prototype</text><text class="t2" x="270" y="70">Test</text>
+<text class="t3" x="114" y="88">Listen</text><text class="t3" x="153" y="88">Frame</text><text class="t3" x="192" y="88">Generate</text><text class="t3" x="231" y="88">Build</text><text class="t3" x="270" y="88">Learn</text>
+</svg>
+<div class="prompt" id="info-44-p">Design a magazine editorial infographic about <span class="ph">[TOPIC]</span> in a Swiss grid style. Use a strict column grid, an oversized bold headline, large numbers, strong typographic hierarchy, one accent colour (<span class="ph">[ACCENT COLOUR]</span>) against black and white, and <span class="ph">[NUMBER]</span> concise content blocks. Clean, confident and print ready.</div>
+<button class="copy" type="button" data-copy="info-44-p">Copy prompt</button>
+</article>
+</div>
+</section>
+<section class="extras" aria-label="Add-ons and tips">
+<div class="panel">
+<h2>Power Add-Ons</h2>
+<p class="muted">Paste any line at the end of a prompt to sharpen the result.</p>
+<ul class="addons">
+<li><b>A</b><span id="info-addon-a">Use a colourblind-safe palette and high contrast text.</span><button class="copy small" type="button" data-copy="info-addon-a" aria-label="Copy add-on A">Copy</button></li>
+<li><b>B</b><span id="info-addon-b">All text must be large, legible and spelled correctly.</span><button class="copy small" type="button" data-copy="info-addon-b" aria-label="Copy add-on B">Copy</button></li>
+<li><b>C</b><span id="info-addon-c">Add bilingual labels in English and <span class="ph">[LANGUAGE]</span>.</span><button class="copy small" type="button" data-copy="info-addon-c" aria-label="Copy add-on C">Copy</button></li>
+<li><b>D</b><span id="info-addon-d">Leave space for a logo in the top right corner.</span><button class="copy small" type="button" data-copy="info-addon-d" aria-label="Copy add-on D">Copy</button></li>
+<li><b>E</b><span id="info-addon-e">Format: <span class="ph">[A4 landscape / 1080x1350 / 16:9]</span>.</span><button class="copy small" type="button" data-copy="info-addon-e" aria-label="Copy add-on E">Copy</button></li>
+</ul>
+</div>
+<div class="panel">
+<h2>Pro Tips</h2>
+<ol class="steps">
+<li><span class="sn">1</span><span>Ask for 2 or 3 variations, then refine the strongest one.</span></li>
+<li><span class="sn">2</span><span>Say where it will be displayed and at what size.</span></li>
+<li><span class="sn">3</span><span>Check every label, fact and spelling before sharing.</span></li>
+<li><span class="sn">4</span><span>Add alt text when you post an infographic online.</span></li>
+</ol>
+</div>
+</section>
+</div>
+</div>
+
+<div class="libpanel p-comic" id="comics" data-panel>
+<section class="hero hero-comic">
+<div class="wrap hero-in">
+<div class="hero-copy">
+<p class="kicker">Teacher resource  |  16 styles  |  4 layouts</p>
+<h1 class="h1-comic">Comic Style Library</h1>
+<p class="lead">Turn any uploaded PDF into a comic. Every style and layout comes with a copy-ready prompt for Gemini, ChatGPT, Canva or any AI image tool.</p>
+<p class="tip"><b>Tip:</b> Name the exact pages or section you want, for example <span class="ph">[pages 4 to 7]</span>, so the comic stays focused. Layout lines (L1 to L4) go at the end of any style prompt.</p>
+<div class="switch" aria-label="Choose a library"><a href="#infographics" data-tab="infographics">Infographic Styles</a><a href="#comics" data-tab="comics">Comic Styles</a></div>
+</div>
+<div class="howto">
+<h2>How to Use</h2>
+<ol class="steps">
+<li><span class="sn">1</span><span>Upload the PDF to your AI tool first.</span></li>
+<li><span class="sn">2</span><span>Pick a comic style and a panel layout.</span></li>
+<li><span class="sn">3</span><span>Copy both prompts and swap every <span class="ph">[BRACKET]</span>.</span></li>
+<li><span class="sn">4</span><span>Check every fact and quote against the PDF.</span></li>
+</ol>
+</div>
+</div>
+</section>
+<div class="wrap">
+<div class="toolbar">
+<nav class="toc" aria-label="Comic Style Library sections">
+<a href="#comic-s1" style="--a:#B8322A;--t:#FBE7E4"><span>1</span>Classic Comic Formats</a>
+<a href="#comic-s2" style="--a:#2453B8;--t:#E6ECFA"><span>2</span>Art Styles</a>
+<a href="#comic-s3" style="--a:#2F7D3A;--t:#E6F2E7"><span>3</span>Learning Comics</a>
+<a href="#comic-s4" style="--a:#6B44C4;--t:#EEE8FA"><span>4</span>Panel Layouts and Add-Ons</a>
+</nav>
+<label class="search"><span class="visually-hidden">Filter Comic Style Library</span><input type="search" placeholder="Filter, e.g. manga or map" data-filter></label>
+</div>
+<p class="empty" hidden data-empty>No styles match that search.</p>
+<section class="sec" id="comic-s1" style="--a:#B8322A;--t:#FBE7E4" aria-labelledby="comic-s1-h">
+<div class="sec-head">
+<div><p class="kicker">Section 1</p><h2 id="comic-s1-h">Classic Comic Formats</h2></div>
+<p class="range">01 to 04</p>
+</div>
+<div class="grid">
+<article class="card" id="comic-01" data-search="01 classic action comic exciting summaries, key events, hooks">
+<div class="card-head"><span class="num">01</span><h3>Classic Action Comic</h3></div>
+<p class="best"><b>Best for:</b> exciting summaries, key events, hooks</p>
+<svg class="pv" role="img" aria-label="Sample preview: Classic Action Comic" viewBox="0 0 320 100">
+<defs><pattern id="ht01" width="5" height="5" patternUnits="userSpaceOnUse"><circle cx="2.5" cy="2.5" r="1" style="fill:#B8322A;fill-opacity:.35"></circle></pattern></defs>
+<rect class="pn" x="8" y="8" width="96" height="84"></rect><rect x="8" y="8" width="96" height="84" style="fill:url(#ht01)"></rect>
+<path d="M24 62H50L58 90H16Z" class="a" style="stroke:var(--ink);stroke-width:1"></path>
+<rect x="30" y="60" width="13" height="22" rx="2" style="fill:#2453B8;stroke:var(--ink);stroke-width:1"></rect>
+<circle cx="36.5" cy="52" r="8" style="fill:#F2C9A0;stroke:var(--ink);stroke-width:1"></circle><rect class="a" x="29" y="48" width="15" height="4" rx="1"></rect>
+<ellipse class="bb" cx="76" cy="30" rx="25" ry="13"></ellipse><path class="w" d="M60 38L50 50L68 41Z" style="stroke:var(--ink);stroke-width:1"></path><ellipse class="w" cx="76" cy="30" rx="24" ry="12"></ellipse>
+<text class="bt c" x="76" y="28">Key facts,</text><text class="bt c" x="76" y="36">assemble!</text>
+<rect class="pn" x="112" y="8" width="96" height="84"></rect>
+<path d="M160 16L167 34L186 26L177 44L200 50L177 57L186 75L167 67L160 86L153 67L134 75L143 57L120 50L143 44L134 26L153 34Z" style="fill:#F6D776;stroke:var(--ink);stroke-width:1.2"></path>
+<text class="fx a c" x="160" y="57" style="font-size:19px">ZOOM!</text>
+<rect class="pn" x="216" y="8" width="96" height="84"></rect>
+<rect class="w" x="226" y="18" width="34" height="44" style="stroke:var(--ink);stroke-width:1"></rect><text class="t2 a" x="232" y="30">PDF</text>
+<path class="sk" d="M232 38H254M232 45H254M232 52H248" style="stroke-width:1"></path>
+<path class="sk" d="M262 44L276 52"></path>
+<circle cx="286" cy="44" r="7" style="fill:#F2C9A0;stroke:var(--ink);stroke-width:1"></circle><rect class="a" x="280" y="41" width="12" height="3" rx="1"></rect>
+<rect x="279" y="51" width="14" height="20" rx="2" style="fill:#2453B8;stroke:var(--ink);stroke-width:1"></rect>
+<rect x="219" y="75" width="90" height="13" style="fill:#F6D776;stroke:var(--ink);stroke-width:1"></rect><text class="t3 c" x="264" y="84">Chapter 3 in 60 seconds</text>
+</svg>
+<div class="prompt" id="comic-01-p">Using the attached PDF, turn <span class="ph">[SECTION OR PAGES]</span> into a <span class="ph">[NUMBER]</span>-panel classic action comic for <span class="ph">[AUDIENCE]</span>. Create an original hero, <span class="ph">[CHARACTER DESCRIPTION]</span>, who explains each key idea. Use bold ink outlines, halftone dots, dynamic angles, sound-effect lettering and short speech bubbles based only on the PDF.</div>
+<button class="copy" type="button" data-copy="comic-01-p">Copy prompt</button>
+</article>
+<article class="card" id="comic-02" data-search="02 manga character-driven stories, language units">
+<div class="card-head"><span class="num">02</span><h3>Manga</h3></div>
+<p class="best"><b>Best for:</b> character-driven stories, language units</p>
+<svg class="pv" role="img" aria-label="Sample preview: Manga" viewBox="0 0 320 100">
+<defs><pattern id="st02" width="4" height="4" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".9" style="fill:#16213A;fill-opacity:.28"></circle></pattern></defs>
+<path class="pn" d="M8 8H150L140 92H8Z"></path><path d="M8 8H150L140 92H8Z" style="fill:url(#st02)"></path>
+<circle cx="72" cy="62" r="22" class="w" style="stroke:var(--ink);stroke-width:1.2"></circle>
+<path class="k" d="M49 60C47 34 97 32 95 60L89 47L83 56L76 44L69 56L62 44L56 56Z"></path>
+<ellipse class="k" cx="63" cy="64" rx="4" ry="6"></ellipse><ellipse class="k" cx="81" cy="64" rx="4" ry="6"></ellipse>
+<circle class="w" cx="64.5" cy="61.5" r="1.6"></circle><circle class="w" cx="82.5" cy="61.5" r="1.6"></circle>
+<path class="sk" d="M69 76Q72 79 75 76" style="stroke-width:1"></path>
+<ellipse class="bb" cx="42" cy="22" rx="30" ry="11"></ellipse>
+<text class="bt c" x="42" y="21">So THAT is how</text><text class="bt c" x="42" y="29">it works!</text>
+<path class="pn" d="M156 8H312V46H152Z"></path>
+<path class="sk" d="M160 16H230M168 22H300M158 28H260M172 34H306M162 40H240" style="stroke-width:.7"></path>
+<text class="fx c" x="236" y="33" style="font-size:16px;fill:var(--ink)">WHOOSH</text>
+<path class="pn" d="M151 52H312V92H146Z"></path><path d="M151 52H312V92H146Z" style="fill:url(#st02)"></path>
+<rect class="w" x="168" y="60" width="126" height="24" style="stroke:var(--ink);stroke-width:1"></rect>
+<text class="t3 c" x="231" y="70">CHAPTER 4</text><text class="t2 c" x="231" y="79">The Secret of Leaves</text>
+</svg>
+<div class="prompt" id="comic-02-p">Using the attached PDF, adapt <span class="ph">[SECTION OR TOPIC]</span> into a <span class="ph">[NUMBER]</span>-panel manga page for <span class="ph">[AUDIENCE]</span>. Use black and white screentone shading, expressive original characters, speed lines and varied panel shapes. Show one key idea per panel and keep the dialogue short and faithful to the PDF.</div>
+<button class="copy" type="button" data-copy="comic-02-p">Copy prompt</button>
+</article>
+<article class="card" id="comic-03" data-search="03 webtoon vertical scroll phones, instagram, long explanations">
+<div class="card-head"><span class="num">03</span><h3>Webtoon Vertical Scroll</h3></div>
+<p class="best"><b>Best for:</b> phones, Instagram, long explanations</p>
+<svg class="pv" role="img" aria-label="Sample preview: Webtoon Vertical Scroll" viewBox="0 0 320 100">
+<text class="fx a" x="14" y="34" style="font-size:15px">EPISODE 1</text>
+<text class="t2" x="14" y="47">The Water Cycle</text>
+<text class="t3" x="14" y="63" style="fill:var(--mut)">Tall stacked panels</text><text class="t3" x="14" y="72" style="fill:var(--mut)">made for phone screens</text>
+<rect class="k" x="120" y="4" width="70" height="92" rx="9"></rect><rect class="w" x="124" y="10" width="62" height="80" rx="3"></rect>
+<rect x="128" y="14" width="54" height="22" style="fill:#DDF1F7;stroke:var(--ink);stroke-width:1"></rect>
+<path d="M150 18C146 24 144 27 144 29a6 6 0 0 0 12 0C156 27 154 24 150 18Z" style="fill:#5BB8D6;stroke:var(--ink);stroke-width:.8"></path>
+<rect x="128" y="41" width="54" height="22" style="fill:#EEF3FB;stroke:var(--ink);stroke-width:1"></rect>
+<ellipse cx="148" cy="52" rx="12" ry="6" style="fill:#fff;stroke:var(--ink);stroke-width:.8"></ellipse><ellipse cx="160" cy="50" rx="9" ry="5" style="fill:#fff;stroke:var(--ink);stroke-width:.8"></ellipse>
+<rect x="128" y="68" width="54" height="18" style="fill:#E3F2E4;stroke:var(--ink);stroke-width:1"></rect>
+<path d="M140 72l-2 5M150 72l-2 5M160 72l-2 5M170 72l-2 5" style="stroke:#2453B8;stroke-width:1.2;stroke-linecap:round"></path>
+<path class="sk" d="M184 25H204M184 52H204M184 77H204" style="stroke-width:.8;stroke-dasharray:2 2"></path>
+<text class="t3" x="208" y="27">1  Meet Drip</text><text class="t3" x="208" y="54">2  Up to the clouds</text><text class="t3" x="208" y="79">3  A rainy day</text>
+</svg>
+<div class="prompt" id="comic-03-p">Using the attached PDF, create a vertical scrolling webtoon that explains <span class="ph">[TOPIC]</span> in <span class="ph">[NUMBER]</span> stacked panels. Use soft digital colour, white space between panels, a recurring original character named <span class="ph">[NAME]</span> and caption boxes summarising each key point from the PDF. Format: 1080 px wide, easy to read on a phone.</div>
+<button class="copy" type="button" data-copy="comic-03-p">Copy prompt</button>
+</article>
+<article class="card" id="comic-04" data-search="04 newspaper comic strip quick recaps, exit tickets, newsletters">
+<div class="card-head"><span class="num">04</span><h3>Newspaper Comic Strip</h3></div>
+<p class="best"><b>Best for:</b> quick recaps, exit tickets, newsletters</p>
+<svg class="pv" role="img" aria-label="Sample preview: Newspaper Comic Strip" viewBox="0 0 320 100">
+<text class="fx a" x="10" y="18" style="font-size:13px">PHOTOSYNTHESIS PALS</text>
+<rect class="pn" x="8" y="24" width="73" height="70"></rect><rect class="pn" x="85" y="24" width="73" height="70"></rect><rect class="pn" x="162" y="24" width="73" height="70"></rect><rect class="pn" x="239" y="24" width="73" height="70"></rect>
+<rect class="bb" x="12" y="28" width="65" height="15" rx="6"></rect><text class="bt c" x="44.5" y="38">I'm so hungry.</text>
+<ellipse cx="44" cy="72" rx="13" ry="8" transform="rotate(-20 44 72)" style="fill:#4E9A54;stroke:var(--ink);stroke-width:1"></ellipse><circle class="k" cx="40" cy="71" r="1.3"></circle><circle class="k" cx="47" cy="69" r="1.3"></circle>
+<rect class="bb" x="89" y="28" width="65" height="15" rx="6"></rect><text class="bt c" x="121.5" y="38">Use my light!</text>
+<path class="sk" d="M121 50v-3M121 82v3M105 66h-3M137 66h3M110 55l-2-2M132 55l2-2M110 77l-2 2M132 77l2 2" style="stroke:#C98A12"></path>
+<circle cx="121" cy="66" r="11" style="fill:#F6D776;stroke:var(--ink);stroke-width:1"></circle><circle class="k" cx="117" cy="64" r="1.3"></circle><circle class="k" cx="125" cy="64" r="1.3"></circle><path class="sk" d="M117 69Q121 72 125 69" style="stroke-width:.9"></path>
+<rect class="bb" x="166" y="28" width="65" height="15" rx="6"></rect><text class="bt c" x="198.5" y="38">Add water and air...</text>
+<ellipse cx="190" cy="74" rx="13" ry="8" transform="rotate(-20 190 74)" style="fill:#4E9A54;stroke:var(--ink);stroke-width:1"></ellipse><circle class="k" cx="186" cy="73" r="1.3"></circle><circle class="k" cx="193" cy="71" r="1.3"></circle>
+<path d="M218 56C215 61 213 63 213 65a5 5 0 0 0 10 0C223 63 221 61 218 56Z" style="fill:#5BB8D6;stroke:var(--ink);stroke-width:.8"></path>
+<rect class="bb" x="243" y="28" width="65" height="15" rx="6"></rect><text class="bt c" x="275.5" y="38">Lunch is served!</text>
+<ellipse cx="275" cy="72" rx="13" ry="8" transform="rotate(-20 275 72)" style="fill:#4E9A54;stroke:var(--ink);stroke-width:1"></ellipse><path class="sk" d="M269 71l2-1.5 2 1.5M277 68l2-1.5 2 1.5" style="stroke-width:.9"></path>
+<path class="a" d="M296 54l1.5 3.5 3.5 1.5-3.5 1.5-1.5 3.5-1.5-3.5-3.5-1.5 3.5-1.5z"></path>
+</svg>
+<div class="prompt" id="comic-04-p">Using the attached PDF, create a 4-panel newspaper comic strip about the main idea of <span class="ph">[SECTION]</span>. Panel 1 asks a question, panels 2 and 3 explain, and panel 4 ends with a light punchline that is still accurate. Use clean lines, flat <span class="ph">[COLOUR PALETTE]</span> colours, a strip title and hand-lettered speech bubbles.</div>
+<button class="copy" type="button" data-copy="comic-04-p">Copy prompt</button>
+</article>
+</div>
+</section><section class="sec" id="comic-s2" style="--a:#2453B8;--t:#E6ECFA" aria-labelledby="comic-s2-h">
+<div class="sec-head">
+<div><p class="kicker">Section 2</p><h2 id="comic-s2-h">Art Styles</h2></div>
+<p class="range">05 to 10</p>
+</div>
+<div class="grid">
+<article class="card" id="comic-05" data-search="05 graphic novel noir history, mysteries, persuasive texts">
+<div class="card-head"><span class="num">05</span><h3>Graphic Novel Noir</h3></div>
+<p class="best"><b>Best for:</b> history, mysteries, persuasive texts</p>
+<svg class="pv" role="img" aria-label="Sample preview: Graphic Novel Noir" viewBox="0 0 320 100">
+<rect x="0" y="0" width="320" height="100" rx="8" style="fill:#1A1A1A"></rect>
+<rect x="8" y="8" width="150" height="84" style="fill:#2B2B2B;stroke:#E8E8E8;stroke-width:1.2"></rect>
+<rect x="96" y="22" width="34" height="70" style="fill:#F2D06B"></rect>
+<path d="M96 92H130L158 92L158 80Z" style="fill:#F2D06B;fill-opacity:.25"></path>
+<circle cx="113" cy="47" r="6" style="fill:#111"></circle><rect x="104" y="40" width="18" height="3" style="fill:#111"></rect><rect x="107" y="35" width="12" height="6" rx="1" style="fill:#111"></rect>
+<path d="M104 55H122L126 92H100Z" style="fill:#111"></path>
+<rect x="14" y="14" width="74" height="22" style="fill:#F2D06B"></rect>
+<text class="t3" x="19" y="23">October 1929.</text><text class="t3" x="19" y="31">The crash was near.</text>
+<rect x="166" y="8" width="146" height="84" style="fill:#2B2B2B;stroke:#E8E8E8;stroke-width:1.2"></rect>
+<path d="M172 70V44H186V70ZM190 70V30H206V70ZM210 70V50H222V70ZM226 70V36H244V70ZM248 70V46H262V70ZM266 70V26H284V70ZM288 70V52H306V70Z" style="fill:#111"></path>
+<path d="M194 36h3M200 42h3M230 42h3M236 50h3M270 32h3M276 40h3M270 48h3" style="stroke:#F2D06B;stroke-width:2"></path>
+<path d="M180 12l-6 14M200 12l-6 14M220 12l-6 14M240 12l-6 14M260 12l-6 14M280 12l-6 14M300 12l-6 14" style="stroke:#9AA3B5;stroke-width:.6;stroke-opacity:.6"></path>
+<rect x="172" y="74" width="134" height="13" style="fill:#E8E8E8"></rect><text class="t3 c" x="239" y="83">What would you have done?</text>
+</svg>
+<div class="prompt" id="comic-05-p">Using the attached PDF, retell <span class="ph">[EVENT OR SECTION]</span> as a <span class="ph">[NUMBER]</span>-panel graphic novel page in a moody noir style. Use heavy black shadows, a limited palette of <span class="ph">[COLOURS]</span>, cinematic camera angles and serious narration boxes. Base every fact on the PDF and end with a reflective question for <span class="ph">[AUDIENCE]</span>.</div>
+<button class="copy" type="button" data-copy="comic-05-p">Copy prompt</button>
+</article>
+<article class="card" id="comic-06" data-search="06 ligne claire adventure travel, geography, cultural units">
+<div class="card-head"><span class="num">06</span><h3>Ligne Claire Adventure</h3></div>
+<p class="best"><b>Best for:</b> travel, geography, cultural units</p>
+<svg class="pv" role="img" aria-label="Sample preview: Ligne Claire Adventure" viewBox="0 0 320 100">
+<rect x="8" y="8" width="150" height="84" style="fill:#BFE3F5;stroke:var(--ink);stroke-width:1.5"></rect>
+<circle cx="132" cy="26" r="8" style="fill:#F6D776;stroke:var(--ink);stroke-width:1"></circle>
+<path d="M8.75 70C40 58 70 62 100 70S140 66 157.25 62V91.25H8.75Z" style="fill:#F2C27B;stroke:var(--ink);stroke-width:1"></path>
+<path d="M8.75 82C50 74 100 78 157.25 76V91.25H8.75Z" style="fill:#E8A44A;stroke:var(--ink);stroke-width:1"></path>
+<path d="M44 60H56V78H44Z" style="fill:#E8D9B5;stroke:var(--ink);stroke-width:1"></path>
+<path d="M45 78H49V88H45ZM51 78H55V88H51Z" style="fill:#2453B8;stroke:var(--ink);stroke-width:.8"></path>
+<circle cx="50" cy="52" r="7" style="fill:#F2C9A0;stroke:var(--ink);stroke-width:1"></circle>
+<path d="M44 48C46 42 54 41 57 47L52 45Z" style="fill:#E07B39;stroke:var(--ink);stroke-width:.8"></path>
+<rect x="44" y="58" width="12" height="3" style="fill:#C8432E;stroke:var(--ink);stroke-width:.6"></rect>
+<rect class="bb" x="66" y="16" width="56" height="20" rx="7"></rect><path class="w" d="M72 35L62 46L80 35Z" style="stroke:var(--ink);stroke-width:1"></path><rect class="w" x="67" y="17" width="54" height="18" rx="6"></rect>
+<text class="bt c" x="94" y="25">Next stop:</text><text class="bt c" x="94" y="32">the oasis!</text>
+<rect x="166" y="8" width="146" height="84" style="fill:#FBF1D9;stroke:var(--ink);stroke-width:1.5"></rect>
+<rect x="172" y="14" width="64" height="13" style="fill:#F6D776;stroke:var(--ink);stroke-width:1"></rect><text class="t3" x="177" y="23">Day 3, Egypt</text>
+<path d="M182 80C200 70 210 52 232 56S262 46 280 38" style="fill:none;stroke:#C8432E;stroke-width:1.5;stroke-dasharray:3 3;stroke-linecap:round"></path>
+<path d="M276 34l8 8M284 34l-8 8" style="stroke:#C8432E;stroke-width:2.2;stroke-linecap:round"></path>
+<circle cx="182" cy="80" r="3" style="fill:var(--a);stroke:var(--ink);stroke-width:.8"></circle>
+<text class="t2" x="246" y="56">Siwa Oasis</text>
+<path d="M290 64v18M286 68c4-6 10-6 12 0M284 74c4-5 10-5 14 0" style="fill:none;stroke:#3F7F46;stroke-width:1.4;stroke-linecap:round"></path>
+</svg>
+<div class="prompt" id="comic-06-p">Using the attached PDF, create a <span class="ph">[NUMBER]</span>-panel adventure comic about <span class="ph">[TOPIC]</span> in a ligne claire style: clean even outlines, flat bright colours, no hatching and detailed backgrounds of <span class="ph">[SETTING]</span>. An original explorer, <span class="ph">[CHARACTER DESCRIPTION]</span>, discovers each key fact from the PDF in order.</div>
+<button class="copy" type="button" data-copy="comic-06-p">Copy prompt</button>
+</article>
+<article class="card" id="comic-07" data-search="07 kawaii chibi younger learners, vocabulary, routines">
+<div class="card-head"><span class="num">07</span><h3>Kawaii Chibi</h3></div>
+<p class="best"><b>Best for:</b> younger learners, vocabulary, routines</p>
+<svg class="pv" role="img" aria-label="Sample preview: Kawaii Chibi" viewBox="0 0 320 100">
+<rect x="8" y="8" width="304" height="84" rx="10" style="fill:#FDEFF4;stroke:var(--ink);stroke-width:1.5"></rect>
+<rect x="60" y="72" width="22" height="16" rx="7" class="a" style="stroke:var(--ink);stroke-width:1"></rect>
+<circle cx="71" cy="54" r="19" style="fill:#FBE3D3;stroke:var(--ink);stroke-width:1.2"></circle>
+<path d="M52 52C52 30 90 30 90 52C86 44 80 40 71 40S56 44 52 52Z" style="fill:#6B4A3A;stroke:var(--ink);stroke-width:1"></path>
+<ellipse class="k" cx="64" cy="56" rx="3" ry="4"></ellipse><ellipse class="k" cx="78" cy="56" rx="3" ry="4"></ellipse><circle class="w" cx="65" cy="54.5" r="1.1"></circle><circle class="w" cx="79" cy="54.5" r="1.1"></circle>
+<ellipse cx="59" cy="63" rx="3.5" ry="2" style="fill:#F2A7C3"></ellipse><ellipse cx="83" cy="63" rx="3.5" ry="2" style="fill:#F2A7C3"></ellipse>
+<path class="sk" d="M68 64Q71 67 74 64" style="stroke-width:1"></path>
+<path d="M160 26C150 42 144 52 144 62a16 16 0 0 0 32 0C176 52 170 42 160 26Z" style="fill:#8FD3E0;stroke:var(--ink);stroke-width:1.2"></path>
+<ellipse class="k" cx="154" cy="62" rx="2.5" ry="3.5"></ellipse><ellipse class="k" cx="166" cy="62" rx="2.5" ry="3.5"></ellipse><circle class="w" cx="155" cy="61" r="1"></circle><circle class="w" cx="167" cy="61" r="1"></circle>
+<ellipse cx="149" cy="68" rx="3" ry="1.8" style="fill:#F2A7C3"></ellipse><ellipse cx="171" cy="68" rx="3" ry="1.8" style="fill:#F2A7C3"></ellipse>
+<path class="sk" d="M156 70Q160 74 164 70" style="stroke-width:1"></path>
+<rect class="bb" x="192" y="22" width="108" height="30" rx="12"></rect><path class="w" d="M198 48L180 58L206 50Z" style="stroke:var(--ink);stroke-width:1"></path><rect class="w" x="193" y="23" width="106" height="28" rx="11"></rect>
+<text class="bt c" x="246" y="34">Hi! I'm Drip.</text><text class="bt c" x="246" y="44">I travel the water cycle!</text>
+<path d="M112 30l1.5 3 3 1.5-3 1.5-1.5 3-1.5-3-3-1.5 3-1.5zM120 74l1 2 2 1-2 1-1 2-1-2-2-1 2-1zM286 72l1.5 3 3 1.5-3 1.5-1.5 3-1.5-3-3-1.5 3-1.5z" style="fill:#F2A7C3"></path>
+</svg>
+<div class="prompt" id="comic-07-p">Using the attached PDF, turn <span class="ph">[TOPIC]</span> into a <span class="ph">[NUMBER]</span>-panel cute chibi comic. Draw original characters with big heads, small bodies and expressive faces in pastel <span class="ph">[COLOUR PALETTE]</span> colours, with rounded speech bubbles. Turn key ideas from the PDF into friendly characters and keep every sentence short for <span class="ph">[AUDIENCE]</span>.</div>
+<button class="copy" type="button" data-copy="comic-07-p">Copy prompt</button>
+</article>
+<article class="card" id="comic-08" data-search="08 retro pop art posters, bold facts, classroom displays">
+<div class="card-head"><span class="num">08</span><h3>Retro Pop Art</h3></div>
+<p class="best"><b>Best for:</b> posters, bold facts, classroom displays</p>
+<svg class="pv" role="img" aria-label="Sample preview: Retro Pop Art" viewBox="0 0 320 100">
+<defs>
+<pattern id="bd08a" width="6" height="6" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1.6" style="fill:#D63A2F;fill-opacity:.55"></circle></pattern>
+<pattern id="bd08b" width="6" height="6" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1.4" style="fill:#fff;fill-opacity:.35"></circle></pattern>
+</defs>
+<rect x="8" y="8" width="150" height="84" style="fill:#F6D776;stroke:var(--ink);stroke-width:2.2"></rect><rect x="8" y="8" width="150" height="84" style="fill:url(#bd08a)"></rect>
+<path d="M83 14L92 32L112 24L104 42L128 46L106 54L116 72L94 64L86 86L76 66L54 74L62 56L38 50L60 42L52 24L72 32Z" style="fill:#fff;stroke:var(--ink);stroke-width:1.6"></path>
+<text class="fx c" x="83" y="49" style="font-size:15px;fill:#D63A2F">DID YOU</text><text class="fx c" x="83" y="63" style="font-size:15px;fill:#D63A2F">KNOW?!</text>
+<rect x="166" y="8" width="146" height="84" style="fill:#2B6CC4;stroke:var(--ink);stroke-width:2.2"></rect><rect x="166" y="8" width="146" height="84" style="fill:url(#bd08b)"></rect>
+<rect x="178" y="22" width="122" height="44" rx="18" style="fill:#fff;stroke:var(--ink);stroke-width:1.6"></rect><path d="M200 64L190 82L214 65Z" style="fill:#fff;stroke:var(--ink);stroke-width:1.6"></path><rect x="180" y="24" width="118" height="40" rx="16" class="w"></rect>
+<text class="bt c" x="239" y="40" style="font-size:9px">An octopus has</text><text class="fx c" x="239" y="56" style="font-size:14px;fill:#D63A2F">THREE HEARTS!</text>
+</svg>
+<div class="prompt" id="comic-08-p">Using the attached PDF, create a <span class="ph">[NUMBER]</span>-panel retro pop art comic about the most surprising facts in <span class="ph">[SECTION]</span>. Use Ben-Day dots, thick black outlines, bold primary colours, dramatic close-ups and big exclamation captions. Every fact must come directly from the PDF. Audience: <span class="ph">[AUDIENCE]</span>.</div>
+<button class="copy" type="button" data-copy="comic-08-p">Copy prompt</button>
+</article>
+<article class="card" id="comic-09" data-search="09 watercolour storybook literature, wellbeing, family events">
+<div class="card-head"><span class="num">09</span><h3>Watercolour Storybook</h3></div>
+<p class="best"><b>Best for:</b> literature, wellbeing, family events</p>
+<svg class="pv" role="img" aria-label="Sample preview: Watercolour Storybook" viewBox="0 0 320 100">
+<rect x="0" y="0" width="320" height="100" rx="8" style="fill:#FFFBF5"></rect>
+<rect x="8" y="8" width="150" height="84" rx="12" style="fill:#fff;stroke:#8C6E5A;stroke-width:1"></rect>
+<ellipse cx="60" cy="34" rx="40" ry="18" style="fill:#BFE0F2;fill-opacity:.8;filter:blur(4px)"></ellipse>
+<ellipse cx="84" cy="78" rx="62" ry="14" style="fill:#A9CDA0;fill-opacity:.85;filter:blur(3px)"></ellipse>
+<path d="M82 74c0-6 2-10 2-14" style="fill:none;stroke:#5E8A57;stroke-width:1.2;stroke-linecap:round"></path><ellipse cx="84" cy="58" rx="3" ry="4" style="fill:#7FA878"></ellipse>
+<text class="sf" x="18" y="24" style="font-size:8.5px;fill:#5A4636">Once, a small seed</text><text class="sf" x="18" y="35" style="font-size:8.5px;fill:#5A4636">dreamed of the sun.</text>
+<rect x="166" y="8" width="146" height="84" rx="12" style="fill:#fff;stroke:#8C6E5A;stroke-width:1"></rect>
+<circle cx="276" cy="30" r="14" style="fill:#F6C79A;fill-opacity:.85;filter:blur(3px)"></circle>
+<ellipse cx="240" cy="82" rx="62" ry="10" style="fill:#A9CDA0;fill-opacity:.85;filter:blur(3px)"></ellipse>
+<path d="M236 80V50" style="stroke:#5E8A57;stroke-width:1.6;stroke-linecap:round"></path>
+<ellipse cx="228" cy="64" rx="7" ry="3.5" transform="rotate(-25 228 64)" style="fill:#7FA878"></ellipse><ellipse cx="244" cy="58" rx="7" ry="3.5" transform="rotate(25 244 58)" style="fill:#7FA878"></ellipse>
+<circle cx="236" cy="45" r="8" style="fill:#F2A7C3;fill-opacity:.9;filter:blur(1.5px)"></circle><circle cx="236" cy="45" r="3" style="fill:#F6D776"></circle>
+<text class="sf" x="176" y="24" style="font-size:8.5px;fill:#5A4636">And slowly,</text><text class="sf" x="176" y="35" style="font-size:8.5px;fill:#5A4636">it grew.</text>
+</svg>
+<div class="prompt" id="comic-09-p">Using the attached PDF, adapt <span class="ph">[STORY OR SECTION]</span> into a gentle <span class="ph">[NUMBER]</span>-panel watercolour comic. Use soft washes in <span class="ph">[COLOUR PALETTE]</span>, loose ink lines, rounded panel borders and serif caption text. Keep the tone warm and calm, and keep the meaning and key quotes of the PDF for <span class="ph">[AUDIENCE]</span>.</div>
+<button class="copy" type="button" data-copy="comic-09-p">Copy prompt</button>
+</article>
+<article class="card" id="comic-10" data-search="10 sketchbook doodle note-making, reflections, study guides">
+<div class="card-head"><span class="num">10</span><h3>Sketchbook Doodle</h3></div>
+<p class="best"><b>Best for:</b> note-making, reflections, study guides</p>
+<svg class="pv" role="img" aria-label="Sample preview: Sketchbook Doodle" viewBox="0 0 320 100">
+<rect x="0" y="0" width="320" height="100" rx="8" style="fill:#FFFDF7"></rect>
+<path d="M0 20H320M0 30H320M0 40H320M0 50H320M0 60H320M0 70H320M0 80H320M0 90H320" style="stroke:#9FC3E0;stroke-opacity:.55;stroke-width:.6"></path>
+<path d="M18 0V100" style="stroke:#E07B7B;stroke-opacity:.6;stroke-width:.8"></path>
+<path d="M28 13L152 11L154 89L26 91Z" style="fill:none;stroke:#4A4A4A;stroke-width:1.3;stroke-linejoin:round"></path>
+<text class="hw" x="36" y="30" style="font-size:12px;fill:var(--a)">Main idea:</text>
+<text class="hw" x="36" y="46" style="font-size:11px;fill:#2A2A2A">Plants make</text><text class="hw" x="36" y="58" style="font-size:11px;fill:#2A2A2A">their own food</text>
+<circle cx="126" cy="44" r="10" style="fill:#FFF3B0;stroke:#2A2A2A;stroke-width:1.1"></circle><path d="M122 54h8M123 58h6M126 28v-4M112 34l-3-3M140 34l3-3" style="fill:none;stroke:#2A2A2A;stroke-width:1.1;stroke-linecap:round"></path>
+<path d="M36 74C60 70 90 78 120 72" style="fill:none;stroke:var(--a);stroke-width:2;stroke-linecap:round;stroke-opacity:.5"></path>
+<path d="M164 12L300 14L298 90L166 88Z" style="fill:none;stroke:#4A4A4A;stroke-width:1.3;stroke-linejoin:round"></path>
+<rect x="176" y="22" width="56" height="46" transform="rotate(-5 204 45)" style="fill:#FFE98A;stroke:#C9A23F;stroke-width:.6"></rect>
+<text class="hw" x="182" y="38" transform="rotate(-5 204 45)" style="font-size:11px;fill:#2A2A2A">Evidence</text><text class="hw" x="182" y="52" transform="rotate(-5 204 45)" style="font-size:11px;fill:#2A2A2A">page 12</text>
+<circle cx="268" cy="44" r="7" style="fill:none;stroke:#2A2A2A;stroke-width:1.2"></circle><path d="M268 51v18M268 56l-9 6M268 56l9-6M268 69l-7 12M268 69l7 12" style="fill:none;stroke:#2A2A2A;stroke-width:1.2;stroke-linecap:round"></path>
+<text class="hw" x="252" y="30" style="font-size:12px;fill:var(--a)">Got it!</text>
+</svg>
+<div class="prompt" id="comic-10-p">Using the attached PDF, create a sketchbook-style comic that summarises <span class="ph">[SECTION]</span> in <span class="ph">[NUMBER]</span> loose, hand-drawn panels. Use pencil and pen textures on lined paper, doodled icons, sticky notes and handwritten labels, with one highlight colour, <span class="ph">[ACCENT COLOUR]</span>. It should look like a student's own study notes.</div>
+<button class="copy" type="button" data-copy="comic-10-p">Copy prompt</button>
+</article>
+</div>
+</section><section class="sec" id="comic-s3" style="--a:#2F7D3A;--t:#E6F2E7" aria-labelledby="comic-s3-h">
+<div class="sec-head">
+<div><p class="kicker">Section 3</p><h2 id="comic-s3-h">Learning Comics</h2></div>
+<p class="range">11 to 16</p>
+</div>
+<div class="grid">
+<article class="card" id="comic-11" data-search="11 explainer guide comic complex concepts, flipped learning">
+<div class="card-head"><span class="num">11</span><h3>Explainer Guide Comic</h3></div>
+<p class="best"><b>Best for:</b> complex concepts, flipped learning</p>
+<svg class="pv" role="img" aria-label="Sample preview: Explainer Guide Comic" viewBox="0 0 320 100">
+<rect class="pn" x="8" y="8" width="96" height="84"></rect>
+<path class="sk" d="M32 40V34"></path><circle class="a" cx="32" cy="33" r="2.5"></circle>
+<rect class="a" x="20" y="40" width="24" height="18" rx="5" style="stroke:var(--ink);stroke-width:1"></rect><circle class="w" cx="27" cy="49" r="3"></circle><circle class="w" cx="37" cy="49" r="3"></circle><circle class="k" cx="27" cy="49" r="1.3"></circle><circle class="k" cx="37" cy="49" r="1.3"></circle>
+<rect x="22" y="60" width="20" height="22" rx="3" style="fill:#9FB3C8;stroke:var(--ink);stroke-width:1"></rect>
+<circle class="sk2" cx="80" cy="62" r="7"></circle><path d="M73 60C74 52 86 52 87 60L82 57Z" style="fill:#3B2A1A"></path><rect x="73" y="70" width="14" height="16" rx="3" style="fill:#E07B39;stroke:var(--ink);stroke-width:1"></rect>
+<rect class="bb" x="48" y="14" width="52" height="24" rx="8"></rect><text class="bt c" x="74" y="24">Let me show</text><text class="bt c" x="74" y="32">you how!</text>
+<rect class="pn" x="112" y="8" width="96" height="84"></rect>
+<rect x="118" y="14" width="84" height="72" rx="2" style="fill:#F4FAF4;stroke:#9FB3C8;stroke-width:1"></rect>
+<path class="sk" d="M142 42H152M168 42H178M160 50V60" style="stroke-width:1"></path>
+<rect x="122" y="34" width="20" height="16" rx="3" style="fill:#F6D776;stroke:var(--ink);stroke-width:1"></rect><text class="t3 c" x="132" y="44">Sun</text>
+<rect x="152" y="34" width="16" height="16" rx="3" style="fill:#A9CDA0;stroke:var(--ink);stroke-width:1"></rect><text class="t3 c" x="160" y="44">Leaf</text>
+<rect x="178" y="34" width="20" height="16" rx="3" style="fill:#BFE0F2;stroke:var(--ink);stroke-width:1"></rect><text class="t3 c" x="188" y="44">Air</text>
+<rect x="146" y="60" width="28" height="16" rx="3" class="a" style="stroke:var(--ink);stroke-width:1"></rect><text class="t3 c" x="160" y="70" style="fill:#fff">Food</text>
+<rect class="pn" x="216" y="8" width="96" height="84"></rect>
+<text class="fx a" x="224" y="26" style="font-size:13px">RECAP</text>
+<circle class="a" cx="228" cy="40" r="4"></circle><path d="M226 40l1.5 1.5 3-3" style="fill:none;stroke:#fff;stroke-width:1.2;stroke-linecap:round"></path><text class="t3" x="236" y="42">Plants need light</text>
+<circle class="a" cx="228" cy="56" r="4"></circle><path d="M226 56l1.5 1.5 3-3" style="fill:none;stroke:#fff;stroke-width:1.2;stroke-linecap:round"></path><text class="t3" x="236" y="58">Leaves make food</text>
+<circle class="a" cx="228" cy="72" r="4"></circle><path d="M226 72l1.5 1.5 3-3" style="fill:none;stroke:#fff;stroke-width:1.2;stroke-linecap:round"></path><text class="t3" x="236" y="74">Oxygen is released</text>
+</svg>
+<div class="prompt" id="comic-11-p">Using the attached PDF, create a <span class="ph">[NUMBER]</span>-panel explainer comic in which an original guide character, <span class="ph">[CHARACTER DESCRIPTION]</span>, teaches <span class="ph">[CONCEPT]</span> to a curious student. Show one key idea per panel with simple diagrams, and end with a recap panel of 3 main takeaways from the PDF. Audience: <span class="ph">[AUDIENCE]</span>.</div>
+<button class="copy" type="button" data-copy="comic-11-p">Copy prompt</button>
+</article>
+<article class="card" id="comic-12" data-search="12 time travel history history, biographies, timelines">
+<div class="card-head"><span class="num">12</span><h3>Time Travel History</h3></div>
+<p class="best"><b>Best for:</b> history, biographies, timelines</p>
+<svg class="pv" role="img" aria-label="Sample preview: Time Travel History" viewBox="0 0 320 100">
+<rect class="pn" x="8" y="8" width="96" height="84"></rect>
+<rect x="14" y="14" width="48" height="28" style="fill:#2F4A3D;stroke:var(--ink);stroke-width:1"></rect>
+<circle cx="80" cy="56" r="17" style="fill:none;stroke:#6B44C4;stroke-width:2.5"></circle><circle cx="80" cy="56" r="11" style="fill:none;stroke:#B48CFF;stroke-width:2"></circle><circle cx="80" cy="56" r="5" style="fill:#EEE8FA;stroke:#6B44C4;stroke-width:1.5"></circle>
+<circle class="sk2" cx="38" cy="58" r="6"></circle><rect x="32" y="65" width="12" height="16" rx="3" style="fill:#E07B39;stroke:var(--ink);stroke-width:1"></rect>
+<rect x="12" y="78" width="88" height="11" style="fill:#F6D776;stroke:var(--ink);stroke-width:1"></rect><text class="t3 c" x="56" y="86">Meanwhile, in class...</text>
+<rect x="112" y="8" width="96" height="84" style="fill:#FCE7C3;stroke:var(--ink);stroke-width:1.5"></rect>
+<circle cx="190" cy="24" r="7" style="fill:#F6D776;stroke:var(--ink);stroke-width:1"></circle>
+<path d="M118 80L146 40L174 80Z" style="fill:#E8C27A;stroke:var(--ink);stroke-width:1"></path><path d="M160 80L182 50L204 80Z" style="fill:#D9AE62;stroke:var(--ink);stroke-width:1"></path>
+<path d="M112.75 80H207.25V91.25H112.75Z" style="fill:#F2D9A6"></path>
+<rect x="116" y="12" width="62" height="12" style="fill:#F6D776;stroke:var(--ink);stroke-width:1"></rect><text class="t3" x="120" y="20.5">Giza, about 2560 BC</text>
+<circle class="sk2" cx="136" cy="72" r="5"></circle><rect x="131" y="78" width="10" height="11" rx="2" style="fill:#E07B39;stroke:var(--ink);stroke-width:.8"></rect>
+<rect class="bb" x="118" y="44" width="26" height="13" rx="5"></rect><text class="bt c" x="131" y="53">Whoa!</text>
+<rect class="pn" x="216" y="8" width="96" height="84"></rect>
+<rect x="222" y="14" width="84" height="26" style="fill:#2F4A3D;stroke:var(--ink);stroke-width:1"></rect><text class="t3 c" x="264" y="29" style="fill:#F4F1E8">What I learned</text>
+<circle class="sk2" cx="242" cy="62" r="6"></circle><rect x="236" y="69" width="12" height="16" rx="3" style="fill:#E07B39;stroke:var(--ink);stroke-width:1"></rect>
+<rect class="bb" x="254" y="46" width="54" height="24" rx="8"></rect><text class="bt c" x="281" y="56">Pyramids were</text><text class="bt c" x="281" y="64">royal tombs!</text>
+</svg>
+<div class="prompt" id="comic-12-p">Using the attached PDF, create a <span class="ph">[NUMBER]</span>-panel time travel comic in which <span class="ph">[STUDENT CHARACTER]</span> visits <span class="ph">[ERA OR EVENT]</span>. Add a dated caption to each panel, period-accurate clothing and settings, and dialogue explaining each key event from the PDF in order. End back in class with what they learned.</div>
+<button class="copy" type="button" data-copy="comic-12-p">Copy prompt</button>
+</article>
+<article class="card" id="comic-13" data-search="13 science adventure processes, experiments, life cycles">
+<div class="card-head"><span class="num">13</span><h3>Science Adventure</h3></div>
+<p class="best"><b>Best for:</b> processes, experiments, life cycles</p>
+<svg class="pv" role="img" aria-label="Sample preview: Science Adventure" viewBox="0 0 320 100">
+<rect x="8" y="8" width="304" height="84" rx="4" style="fill:#EAF6E3;stroke:var(--ink);stroke-width:1.5"></rect>
+<ellipse cx="70" cy="62" rx="30" ry="15" style="fill:#7BC47F;stroke:var(--ink);stroke-width:1"></ellipse><path d="M48 58H92M46 63H94M48 68H92" style="stroke:#3F7F46;stroke-width:1"></path>
+<ellipse cx="150" cy="34" rx="22" ry="11" style="fill:#7BC47F;stroke:var(--ink);stroke-width:1"></ellipse><path d="M134 31H166M132 35H168M134 39H166" style="stroke:#3F7F46;stroke-width:1"></path>
+<ellipse cx="160" cy="70" rx="26" ry="10" style="fill:#F6D776;stroke:var(--ink);stroke-width:1.2"></ellipse><circle cx="168" cy="68" r="5" style="fill:#BFE0F2;stroke:var(--ink);stroke-width:1"></circle><circle cx="154" cy="68" r="5" style="fill:#BFE0F2;stroke:var(--ink);stroke-width:1"></circle>
+<circle class="sk2" cx="168" cy="68" r="2.5"></circle><circle class="sk2" cx="154" cy="68" r="2.5"></circle>
+<path d="M186 70h6M134 70h-6" style="stroke:var(--ink);stroke-width:1.2"></path>
+<rect x="14" y="14" width="96" height="13" style="fill:#F6D776;stroke:var(--ink);stroke-width:1"></rect><text class="t3" x="18" y="23">Mission: Inside a Leaf</text>
+<rect class="bb" x="48" y="33" width="44" height="11" rx="3"></rect><text class="t3 c" x="70" y="40.5">Chloroplast</text><path class="sk" d="M70 44V48" style="stroke-width:.8"></path>
+<rect class="w" x="212" y="20" width="92" height="64" rx="6" style="stroke:var(--a);stroke-width:1.2"></rect>
+<text class="fx a" x="220" y="36" style="font-size:12px">FACT BOX</text>
+<text class="t3" x="220" y="50">Chloroplasts use</text><text class="t3" x="220" y="60">sunlight to make</text><text class="t3" x="220" y="70">food for the plant.</text>
+</svg>
+<div class="prompt" id="comic-13-p">Using the attached PDF, create a <span class="ph">[NUMBER]</span>-panel science adventure in which tiny explorers travel through <span class="ph">[SYSTEM OR PROCESS]</span>. Label each stage with the correct scientific term from the PDF, add small fact boxes, and use bright <span class="ph">[COLOUR PALETTE]</span> colours with clear, accurate diagrams for <span class="ph">[AUDIENCE]</span>.</div>
+<button class="copy" type="button" data-copy="comic-13-p">Copy prompt</button>
+</article>
+<article class="card" id="comic-14" data-search="14 bilingual vocabulary comic esl, mandarin, arabic, new vocabulary">
+<div class="card-head"><span class="num">14</span><h3>Bilingual Vocabulary Comic</h3></div>
+<p class="best"><b>Best for:</b> ESL, Mandarin, Arabic, new vocabulary</p>
+<svg class="pv" role="img" aria-label="Sample preview: Bilingual Vocabulary Comic" viewBox="0 0 320 100">
+<rect class="pn" x="8" y="8" width="150" height="84"></rect>
+<circle class="sk2" cx="40" cy="62" r="8"></circle><path d="M32 60C32 50 48 50 48 60L44 56Z" style="fill:#3B2A1A"></path><rect x="32" y="70" width="16" height="18" rx="4" class="a" style="stroke:var(--ink);stroke-width:1"></rect>
+<circle class="sk2" cx="124" cy="62" r="8"></circle><path d="M116 60C116 50 132 50 132 60L120 55Z" style="fill:#1A1A1A"></path><rect x="116" y="70" width="16" height="18" rx="4" style="fill:#2453B8;stroke:var(--ink);stroke-width:1"></rect>
+<rect class="bb" x="14" y="14" width="66" height="30" rx="8"></rect><text class="bt" x="20" y="25" style="fill:var(--a);font-size:8px">Hello!</text><text class="zh" x="20" y="38" style="font-size:8px;fill:var(--ink)">你好</text><text class="t3" x="40" y="38" style="fill:var(--mut)">(nǐ hǎo)</text>
+<rect class="bb" x="86" y="14" width="66" height="30" rx="8"></rect><text class="bt" x="92" y="25" style="fill:var(--a);font-size:8px">Thank you!</text><text class="zh" x="92" y="38" style="font-size:8px;fill:var(--ink)">谢谢</text><text class="t3" x="112" y="38" style="fill:var(--mut)">(xièxie)</text>
+<rect class="pn" x="166" y="8" width="146" height="84"></rect>
+<text class="fx a" x="176" y="26" style="font-size:13px">GLOSSARY</text>
+<path d="M176 32H302" style="stroke:var(--a);stroke-width:1"></path>
+<text class="t2" x="176" y="46">hello</text><text class="zh" x="236" y="46" style="font-size:8px;fill:var(--ink)">你好</text><text class="t3" x="260" y="46" style="fill:var(--mut)">nǐ hǎo</text>
+<text class="t2" x="176" y="62">thank you</text><text class="zh" x="236" y="62" style="font-size:8px;fill:var(--ink)">谢谢</text><text class="t3" x="260" y="62" style="fill:var(--mut)">xièxie</text>
+<text class="t2" x="176" y="78">goodbye</text><text class="zh" x="236" y="78" style="font-size:8px;fill:var(--ink)">再见</text><text class="t3" x="260" y="78" style="fill:var(--mut)">zàijiàn</text>
+</svg>
+<div class="prompt" id="comic-14-p">Using the attached PDF, create a <span class="ph">[NUMBER]</span>-panel comic that uses <span class="ph">[NUMBER]</span> key words from the PDF in context. Write each speech bubble in English with a <span class="ph">[LANGUAGE]</span> translation below, highlight target words in <span class="ph">[ACCENT COLOUR]</span> and finish with a glossary panel. Keep sentences short for <span class="ph">[LEVEL, e.g. beginner EAL]</span> learners.</div>
+<button class="copy" type="button" data-copy="comic-14-p">Copy prompt</button>
+</article>
+<article class="card" id="comic-15" data-search="15 debate dialogue comic argument, perspectives, ethics">
+<div class="card-head"><span class="num">15</span><h3>Debate Dialogue Comic</h3></div>
+<p class="best"><b>Best for:</b> argument, perspectives, ethics</p>
+<svg class="pv" role="img" aria-label="Sample preview: Debate Dialogue Comic" viewBox="0 0 320 100">
+<rect class="pn" x="8" y="8" width="190" height="84"></rect>
+<circle class="sk2" cx="40" cy="64" r="8"></circle><path d="M32 62C32 52 48 52 48 62L36 57Z" style="fill:#3B2A1A"></path><rect x="32" y="72" width="16" height="16" rx="4" style="fill:#E07B39;stroke:var(--ink);stroke-width:1"></rect>
+<circle class="sk2" cx="166" cy="64" r="8"></circle><path d="M158 62C158 52 174 52 174 62L170 57Z" style="fill:#1A1A1A"></path><rect x="158" y="72" width="16" height="16" rx="4" style="fill:#2453B8;stroke:var(--ink);stroke-width:1"></rect>
+<rect x="14" y="14" width="80" height="28" rx="8" style="fill:#FCE3D2;stroke:#C2602A;stroke-width:1.2"></rect><text class="bt c" x="54" y="25">School should</text><text class="bt c" x="54" y="34">start later!</text>
+<rect x="110" y="14" width="82" height="28" rx="8" style="fill:#DCE6FA;stroke:#2453B8;stroke-width:1.2"></rect><text class="bt c" x="151" y="25">But then it would</text><text class="bt c" x="151" y="34">end later too!</text>
+<text class="fx c" x="103" y="72" style="font-size:16px;fill:var(--mut)">VS</text>
+<rect class="pn" x="206" y="8" width="106" height="84"></rect>
+<rect x="212" y="16" width="94" height="68" rx="4" class="a" style="fill-opacity:.12;stroke:var(--a);stroke-width:1"></rect>
+<text class="t3" x="220" y="30" style="fill:var(--a);letter-spacing:1px">NARRATOR</text>
+<text class="t2" x="220" y="46">Both used evidence.</text><text class="t2" x="220" y="58">Who convinced</text><text class="t2" x="220" y="70">you, and why?</text>
+</svg>
+<div class="prompt" id="comic-15-p">Using the attached PDF, create a <span class="ph">[NUMBER]</span>-panel comic in which two original characters debate <span class="ph">[QUESTION]</span>. Each uses evidence from the PDF to argue one side, in colour-coded bubbles (<span class="ph">[COLOUR A]</span> and <span class="ph">[COLOUR B]</span>). In the final panel, a neutral narrator sums up both views and asks the reader to decide.</div>
+<button class="copy" type="button" data-copy="comic-15-p">Copy prompt</button>
+</article>
+<article class="card" id="comic-16" data-search="16 how-to storyboard procedures, safety, project steps">
+<div class="card-head"><span class="num">16</span><h3>How-To Storyboard</h3></div>
+<p class="best"><b>Best for:</b> procedures, safety, project steps</p>
+<svg class="pv" role="img" aria-label="Sample preview: How-To Storyboard" viewBox="0 0 320 100">
+<rect class="pn" x="8" y="8" width="72" height="84"></rect><rect class="pn" x="84" y="8" width="72" height="84"></rect><rect class="pn" x="160" y="8" width="72" height="84"></rect><rect class="pn" x="236" y="8" width="72" height="84"></rect>
+<circle class="a" cx="20" cy="20" r="7"></circle><text class="t2 c" x="20" y="23" style="fill:#fff">1</text>
+<circle class="a" cx="96" cy="20" r="7"></circle><text class="t2 c" x="96" y="23" style="fill:#fff">2</text>
+<circle class="a" cx="172" cy="20" r="7"></circle><text class="t2 c" x="172" y="23" style="fill:#fff">3</text>
+<circle class="a" cx="248" cy="20" r="7"></circle><text class="t2 c" x="248" y="23" style="fill:#fff">4</text>
+<ellipse class="sk2" cx="38" cy="54" rx="8" ry="11"></ellipse><ellipse class="sk2" cx="52" cy="54" rx="8" ry="11"></ellipse>
+<path d="M30 36l-2 4M40 34l-2 4M56 36l-2 4" style="stroke:#2B6CC4;stroke-width:1.5;stroke-linecap:round"></path>
+<circle cx="111" cy="52" r="9" style="fill:#DCE6FA;stroke:var(--ink);stroke-width:1.5"></circle><circle cx="131" cy="52" r="9" style="fill:#DCE6FA;stroke:var(--ink);stroke-width:1.5"></circle><path class="sk" d="M120 52H122M102 50L96 48M140 50L146 48"></path>
+<path d="M188 34H204M190 34V48L182 68H210L202 48V34" style="fill:#fff;stroke:var(--ink);stroke-width:1.2;stroke-linejoin:round"></path><path d="M185 62H207L210 68H182Z" style="fill:#8FD3E0"></path>
+<rect x="254" y="34" width="36" height="34" rx="2" style="fill:#fff;stroke:var(--ink);stroke-width:1.2"></rect><path class="sk" d="M260 42H284M260 49H284M260 56H276" style="stroke-width:.9"></path>
+<text class="t3 c" x="44" y="84">Wash hands</text><text class="t3 c" x="120" y="84">Wear goggles</text><text class="t3 c" x="196" y="84">Measure 50 ml</text><text class="t3 c" x="272" y="84">Record results</text>
+</svg>
+<div class="prompt" id="comic-16-p">Using the attached PDF, turn the steps for <span class="ph">[PROCESS]</span> into a <span class="ph">[NUMBER]</span>-panel storyboard comic. Each panel shows one action, a step number, a short instruction caption and a tip or warning taken from the PDF. Use a clean, flat style in <span class="ph">[COLOUR PALETTE]</span> with the same characters throughout.</div>
+<button class="copy" type="button" data-copy="comic-16-p">Copy prompt</button>
+</article>
+</div>
+</section><section class="sec" id="comic-s4" style="--a:#6B44C4;--t:#EEE8FA" aria-labelledby="comic-s4-h">
+<div class="sec-head">
+<div><p class="kicker">Section 4</p><h2 id="comic-s4-h">Panel Layouts and Add-Ons</h2></div>
+<p class="range">L1 to L4</p>
+</div>
+<div class="grid">
+<article class="card" id="comic-l1" data-search="l1 three-panel strip quick recaps, slides, exit tickets">
+<div class="card-head"><span class="num">L1</span><h3>Three-Panel Strip</h3></div>
+<p class="best"><b>Best for:</b> quick recaps, slides, exit tickets</p>
+<svg class="pv" role="img" aria-label="Sample preview: Three-Panel Strip" viewBox="0 0 320 100">
+<rect class="a" x="30" y="10" width="260" height="13" rx="2"></rect><text class="t2 c" x="160" y="19.5" style="fill:#fff;letter-spacing:1px">[TITLE]</text>
+<rect class="pn" x="30" y="28" width="82" height="54"></rect><rect class="pn" x="119" y="28" width="82" height="54"></rect><rect class="pn" x="208" y="28" width="82" height="54"></rect>
+<text class="fx a c" x="71" y="54" style="font-size:16px">1</text><text class="t2 c" x="71" y="66">Setup</text>
+<text class="fx a c" x="160" y="54" style="font-size:16px">2</text><text class="t2 c" x="160" y="66">Development</text>
+<text class="fx a c" x="249" y="54" style="font-size:16px">3</text><text class="t2 c" x="249" y="66">Payoff</text>
+<text class="t3 c" x="160" y="93">Based on [PDF TITLE]</text>
+</svg>
+<div class="prompt" id="comic-l1-p">Layout: one horizontal row of 3 equal panels showing setup, development and payoff. Add a title bar above the strip reading <span class="ph">[TITLE]</span> and a source line below it: Based on <span class="ph">[PDF TITLE]</span>. Leave even white gutters between panels. Format: <span class="ph">[16:9 OR A4 LANDSCAPE]</span>.</div>
+<button class="copy" type="button" data-copy="comic-l1-p">Copy prompt</button>
+</article>
+<article class="card" id="comic-l2" data-search="l2 four-panel vertical instagram, phone screens, short gags">
+<div class="card-head"><span class="num">L2</span><h3>Four-Panel Vertical</h3></div>
+<p class="best"><b>Best for:</b> Instagram, phone screens, short gags</p>
+<svg class="pv" role="img" aria-label="Sample preview: Four-Panel Vertical" viewBox="0 0 320 100">
+<text class="t2" x="30" y="44">Read top</text><text class="t2" x="30" y="55">to bottom</text>
+<rect class="a" x="120" y="5" width="80" height="8" rx="1.5"></rect>
+<rect class="pn" x="120" y="16" width="80" height="17"></rect><rect class="pn" x="120" y="36" width="80" height="17"></rect><rect class="pn" x="120" y="56" width="80" height="17"></rect><rect class="pn" x="120" y="76" width="80" height="17"></rect>
+<text class="fx a c" x="160" y="29" style="font-size:12px">1</text><text class="fx a c" x="160" y="49" style="font-size:12px">2</text><text class="fx a c" x="160" y="69" style="font-size:12px">3</text><text class="fx a c" x="160" y="89" style="font-size:12px">4</text>
+<text class="t2" x="212" y="27">Introduce</text><text class="t2" x="212" y="47">Develop</text><text class="t2" x="212" y="67">Twist</text><text class="t2" x="212" y="87">Conclude</text>
+</svg>
+<div class="prompt" id="comic-l2-p">Layout: 4 equal panels stacked vertically and read top to bottom: introduce, develop, twist, conclude. Place the title in a band at the top and keep even white gutters between panels. Format: <span class="ph">[1080x1350 OR A4 PORTRAIT]</span>.</div>
+<button class="copy" type="button" data-copy="comic-l2-p">Copy prompt</button>
+</article>
+<article class="card" id="comic-l3" data-search="l3 six-panel grid full stories, summaries, class comic books">
+<div class="card-head"><span class="num">L3</span><h3>Six-Panel Grid</h3></div>
+<p class="best"><b>Best for:</b> full stories, summaries, class comic books</p>
+<svg class="pv" role="img" aria-label="Sample preview: Six-Panel Grid" viewBox="0 0 320 100">
+<text class="t2" x="20" y="44">Left to right,</text><text class="t2" x="20" y="55">then down</text>
+<rect class="pn" x="118" y="6" width="40" height="26"></rect><rect class="pn" x="162" y="6" width="40" height="26"></rect>
+<rect class="pn" x="118" y="37" width="40" height="26"></rect><rect class="pn" x="162" y="37" width="40" height="26"></rect>
+<rect class="pn" x="118" y="68" width="40" height="26"></rect><rect class="pn" x="162" y="68" width="40" height="26"></rect>
+<rect x="118" y="6" width="40" height="26" style="fill:var(--a);fill-opacity:.18"></rect><rect x="162" y="68" width="40" height="26" style="fill:var(--a);fill-opacity:.18"></rect>
+<text class="fx a c" x="138" y="24" style="font-size:13px">1</text><text class="fx a c" x="182" y="24" style="font-size:13px">2</text>
+<text class="fx a c" x="138" y="55" style="font-size:13px">3</text><text class="fx a c" x="182" y="55" style="font-size:13px">4</text>
+<text class="fx a c" x="138" y="86" style="font-size:13px">5</text><text class="fx a c" x="182" y="86" style="font-size:13px">6</text>
+<text class="t2" x="214" y="22">1  Establishing scene</text><text class="t2" x="214" y="84">6  Key learning</text>
+</svg>
+<div class="prompt" id="comic-l3-p">Layout: a grid of 6 equal panels, 2 across and 3 down, read left to right and top to bottom. Make panel 1 an establishing scene and panel 6 a summary of the key learning from the PDF. Format: <span class="ph">[A4 PORTRAIT]</span>.</div>
+<button class="copy" type="button" data-copy="comic-l3-p">Copy prompt</button>
+</article>
+<article class="card" id="comic-l4" data-search="l4 splash page with insets posters, displays, chapter openers">
+<div class="card-head"><span class="num">L4</span><h3>Splash Page with Insets</h3></div>
+<p class="best"><b>Best for:</b> posters, displays, chapter openers</p>
+<svg class="pv" role="img" aria-label="Sample preview: Splash Page with Insets" viewBox="0 0 320 100">
+<rect x="60" y="6" width="200" height="88" style="fill:#DCD2F5;stroke:var(--ink);stroke-width:1.5"></rect>
+<path d="M60.75 78L110 46L150 70L196 34L259.25 76V93.25H60.75Z" style="fill:#B9A6F0"></path>
+<circle cx="226" cy="28" r="9" style="fill:#F6D776;stroke:var(--ink);stroke-width:1"></circle>
+<text class="fx c" x="160" y="24" style="font-size:15px;fill:var(--ink)">THE BIG IDEA</text>
+<rect class="pn" x="44" y="34" width="44" height="30"></rect><text class="t3 c" x="66" y="52" style="fill:var(--ink)">Detail 1</text>
+<rect class="pn" x="232" y="44" width="44" height="30"></rect><text class="t3 c" x="254" y="62" style="fill:var(--ink)">Detail 2</text>
+<rect class="pn" x="138" y="66" width="44" height="26"></rect><text class="t3 c" x="160" y="82" style="fill:var(--ink)">Fact</text>
+</svg>
+<div class="prompt" id="comic-l4-p">Layout: one large full-page splash image of <span class="ph">[KEY SCENE]</span> with <span class="ph">[NUMBER]</span> small inset panels overlapping the edges, each zooming in on a detail or fact from the PDF. Add a bold comic title at the top and a caption box at the bottom. Format: <span class="ph">[POSTER SIZE]</span>.</div>
+<button class="copy" type="button" data-copy="comic-l4-p">Copy prompt</button>
+</article>
+</div>
+</section>
+<section class="extras" aria-label="Add-ons and tips">
+<div class="panel">
+<h2>Power Add-Ons</h2>
+<p class="muted">Paste any line at the end of a prompt to sharpen the result.</p>
+<ul class="addons">
+<li><b>A</b><span id="comic-addon-a">Keep the same character design, outfit and colours in every panel.</span><button class="copy small" type="button" data-copy="comic-addon-a" aria-label="Copy add-on A">Copy</button></li>
+<li><b>B</b><span id="comic-addon-b">Use only facts from the attached PDF and do not invent information.</span><button class="copy small" type="button" data-copy="comic-addon-b" aria-label="Copy add-on B">Copy</button></li>
+<li><b>C</b><span id="comic-addon-c">Make all lettering large, legible and spelled correctly.</span><button class="copy small" type="button" data-copy="comic-addon-c" aria-label="Copy add-on C">Copy</button></li>
+<li><b>D</b><span id="comic-addon-d">Use original characters only, never real people or existing characters.</span><button class="copy small" type="button" data-copy="comic-addon-d" aria-label="Copy add-on D">Copy</button></li>
+<li><b>E</b><span id="comic-addon-e">End with a panel of 3 key takeaways and the PDF title as the source.</span><button class="copy small" type="button" data-copy="comic-addon-e" aria-label="Copy add-on E">Copy</button></li>
+</ul>
+</div>
+<div class="panel">
+<h2>Responsible Use</h2>
+<ol class="steps">
+<li><span class="sn">1</span><span>If the text comes out garbled, generate one panel at a time.</span></li>
+<li><span class="sn">2</span><span>Check every fact and quote against the PDF.</span></li>
+<li><span class="sn">3</span><span>Let students write or edit the dialogue themselves.</span></li>
+<li><span class="sn">4</span><span>Credit the source and label the comic as AI-assisted.</span></li>
+</ol>
+</div>
+</section>
+</div>
+</div>
+
+</main>
+<div class="toast" role="status" aria-live="polite" data-toast></div>
+<footer class="footer">
+<div class="wrap footer-in">
+<span>Created by Katia Reed. Free to use in classrooms and professional learning.</span>
+<span>AI scaffolds the design. The thinking, accuracy checks and student voice stay with us.</span>
+</div>
+</footer>
+<script>
+(function () {
+  var toast = document.querySelector('[data-toast]'), toastTimer;
+  function showToast(msg) {
+    toast.textContent = msg; toast.classList.add('show');
+    clearTimeout(toastTimer); toastTimer = setTimeout(function () { toast.classList.remove('show'); }, 1800);
+  }
+  function fallbackCopy(text) {
+    var ta = document.createElement('textarea'); ta.value = text; ta.setAttribute('readonly', '');
+    ta.style.position = 'fixed'; ta.style.opacity = '0'; document.body.appendChild(ta); ta.select();
+    var ok = false; try { ok = document.execCommand('copy'); } catch (e) {}
+    document.body.removeChild(ta); return ok;
+  }
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest('[data-copy]'); if (!btn) return;
+    var src = document.getElementById(btn.getAttribute('data-copy')); if (!src) return;
+    var text = src.textContent.replace(/\s+/g, ' ').trim(), original = btn.textContent;
+    function done(ok) {
+      btn.textContent = ok ? 'Copied' : 'Select and copy'; btn.classList.toggle('done', ok);
+      showToast(ok ? 'Prompt copied. Swap the [BRACKETS] for your details.' : 'Copy was blocked. Select the text and copy it.');
+      setTimeout(function () { btn.textContent = original; btn.classList.remove('done'); }, 1800);
+    }
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(function () { done(true); }, function () { done(fallbackCopy(text)); });
+    } else { done(fallbackCopy(text)); }
+  });
+
+  var panels = Array.prototype.slice.call(document.querySelectorAll('[data-panel]'));
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('[data-tab]'));
+  function panelFor(hash) {
+    var id = (hash || '').replace('#', '');
+    if (!id) return 'infographics';
+    if (id === 'infographics' || id.indexOf('info-') === 0) return 'infographics';
+    if (id === 'comics' || id.indexOf('comic-') === 0) return 'comics';
+    return 'infographics';
+  }
+  function show(hash, scroll) {
+    var which = panelFor(hash);
+    panels.forEach(function (p) { p.hidden = p.id !== which; });
+    tabs.forEach(function (t) {
+      if (t.getAttribute('data-tab') === which) t.setAttribute('aria-current', 'page'); else t.removeAttribute('aria-current');
+    });
+    document.title = (which === 'comics' ? 'Comic Style Library' : 'Infographic Style Library') + ' | Visual Prompt Libraries';
+    var id = (hash || '').replace('#', '');
+    if (scroll) {
+      var target = id && id !== which ? document.getElementById(id) : null;
+      if (target) target.scrollIntoView(); else window.scrollTo(0, 0);
+    }
+  }
+  window.addEventListener('hashchange', function () { show(location.hash, true); });
+  show(location.hash, !!location.hash);
+
+  panels.forEach(function (p) {
+    var filter = p.querySelector('[data-filter]'); if (!filter) return;
+    var cards = Array.prototype.slice.call(p.querySelectorAll('.card'));
+    var sections = Array.prototype.slice.call(p.querySelectorAll('.sec'));
+    var empty = p.querySelector('[data-empty]');
+    filter.addEventListener('input', function () {
+      var q = filter.value.trim().toLowerCase(), shown = 0;
+      cards.forEach(function (c) {
+        var hit = !q || c.textContent.toLowerCase().indexOf(q) !== -1;
+        c.hidden = !hit; if (hit) shown++;
+      });
+      sections.forEach(function (s) { s.hidden = !s.querySelector('.card:not([hidden])'); });
+      if (empty) empty.hidden = shown !== 0;
+    });
+  });
+})();
+</script>
+</body>
+</html>
